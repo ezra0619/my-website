@@ -1,0 +1,21 @@
+<main id="coding-bootcamp-testimonials-container">
+
+    <div class="coding-bootcamp-text-section">
+        <p>{{this.currentInfo.testimonial}}</p>
+        <p><span class="person-name">{{this.currentInfo.personName}}</span>&nbsp;&nbsp;<span class="person-title">{{this.currentInfo.personTitle}}</span></p>
+        <img class="pattern-quotes-picture" src="assets/chTen-coding-bootcamp-testimonials-slider/pattern-quotes.svg" alt="pattern-quotes" />
+    </div>
+
+    <div class="coding-bootcamp-image-section">
+        <img class="person-photo" src={{this.currentInfo.personImg}} alt="Testimonials-Picture" />
+        <img class="bg-picture" src="assets/chTen-coding-bootcamp-testimonials-slider/pattern-bg.svg" alt="pattern-bg" />
+        <div class="button-container">
+            <button (click)="change()" class="prev-button"><img src="assets/chTen-coding-bootcamp-testimonials-slider/icon-prev.svg" alt="Prev-Icon" /></button>
+            <button (click)="change()" class="next-button"><img src="assets/chTen-coding-bootcamp-testimonials-slider/icon-next.svg" alt="Next-Icon" /></button>
+        </div>
+    </div>
+
+    <div class="pattern-curve-bg">
+        <img src="assets/chTen-coding-bootcamp-testimonials-slider/pattern-curve.svg" alt="pattern-curve" />
+    </div>
+</main>

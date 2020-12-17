@@ -1,0 +1,245 @@
+
+
+#fylo-data-storage-main-container{
+
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    // font-weight: 700;
+    height: 100vh;
+    width: 100%;
+    color: hsl(243, 100%, 93%);
+    background-color: hsl(229, 57%, 11%);
+    position: relative;
+
+    .fylo-first-half-page{
+        height: 50%;
+        width: 100%;
+        position: relative;
+    }
+
+    .fylo-middle-page{
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .fylo-box-container{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            width: 80%;
+            .fylo-left-container{
+                background-color: hsl(228, 56%, 26%);
+                border-radius: 20px 120px 20px 20px;
+                height: 220px;
+                width: 30%;
+                margin-right: 20px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                // .fylo-logo{
+                //     //
+                // }
+                .fylo-buttons{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    .icon-container{
+                        width: 50px;
+                        height: 45px;
+                        background-color: hsl(229, 57%, 11%);
+                        border-radius: 6px;
+                        margin-right: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+    
+            .fylo-right-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                background-color: hsl(228, 56%, 26%);
+                border-radius: 20px;
+                height: 170px;
+                width: 50%;
+                padding: 20px 40px;
+
+                .how-much-used-container{
+                    padding-bottom: 10px;
+                }
+
+                .talk-bubble {
+                    position: absolute;
+                    top: -60px;
+                    right: 50px;
+                    width: 180px;
+                    border-radius: 10px 10px 0 10px;
+                    // width: auto;
+                    // padding: 40px 60px;
+                    height: auto;
+                    background-color: white;
+                    color: hsl(229, 57%, 11%);
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    .chat-box-info{
+                        height: 80px;
+                        padding: 25px;
+                        display: flex;
+                        align-items: center;
+
+                        .gb-left-text{
+                            font-size: 36px;
+                            padding-right: 10px;
+                        }
+                        .grey{
+                            color: hsl(229, 7%, 55%);
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .tri-right.btm-right:after{
+                    content: ' ';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: auto;
+                    right: 0px;
+                    bottom: -20px;
+                    border: 12px solid;
+                    border-color: white white transparent transparent;
+                }
+                
+                .tracker-container{
+                    width: 100%;
+                    height: 13px;
+                    background-color: hsl(229, 57%, 11%);
+                    border-radius: 20px;
+                    margin-bottom: 5px;
+                    .tracked-progress-container{
+                        width: 81%;
+                        height: 100%;
+                        border-radius: 20px;
+                        border: 2px solid hsl(229, 57%, 11%);
+                        // background: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+                        background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 81%);
+                    }
+                }
+                .stats-container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+        }
+        
+    }
+
+    .fylo-second-half-page{
+        height: 50%;
+        width: 100%;
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 1000px){
+
+        background: url('../../../assets/chEight-fylo-data-storage-component/bg-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .fylo-first-half-page{
+            display: none;
+        }
+
+        .fylo-second-half-page{
+            display: none;
+        }
+
+        .fylo-middle-page{
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 0%;
+
+
+            .fylo-box-container{
+                width: 80%;
+                flex-direction: column;
+                .fylo-left-container{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                }
+        
+                .fylo-right-container{
+                    width: 100%;
+                    .how-much-used-container{
+                        padding-bottom: 10px;
+                    }
+    
+                    .talk-bubble {
+                        position: absolute;
+                        top: 140px;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-radius: 10px 10px 10px 10px;
+                    }
+                    .tri-right.btm-right:after{
+                        display: none;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    @media(max-width: 500px){
+
+        .fylo-middle-page{
+
+            .fylo-box-container{
+
+                .fylo-left-container{
+
+                    padding: 40px 40px 20px 40px;
+
+                }
+                .fylo-right-container{
+    
+                    .talk-bubble {
+                        .chat-box-info {
+                            padding: 10px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

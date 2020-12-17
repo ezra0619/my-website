@@ -1,0 +1,41 @@
+<main id="article-preview-page">
+
+    <div id="article-box-section">
+        <div class="image-section">
+            <img src='assets/chNine-article-preview-component/drawers.jpg' alt="Drawers-image" />
+        </div>
+
+        <div class="text-section">
+            <h2>Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home</h2>
+            
+            <p>Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I’ve got some simple tips 
+            to help you make any room feel complete.</p>
+            
+            <div class="author-information-box">
+                <div class="avatar-information">
+                    <div class="avatar-img-container">
+                        <img src="assets/chNine-article-preview-component/avatar-michelle.jpg" alt="avatar-Michelle" />
+                    </div>
+                    <div class="avatar-text-container">
+                        <p>Michelle Appleton</p>
+                        <p>28 Jun 2020</p>
+                    </div>
+                </div>
+                <button (click)="displayBubble()" class="share-button-container" [ngStyle]="{'background-color': this.style}">
+                    <img src={{this.shareIcon}} alt="icon-share" />
+                </button>
+
+                <div class="social-media-bubble" [ngStyle]="{'display': this.displaySocialBubble}">
+                    <p>SHARE</p>
+                    <a><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a><i class="fab fa-twitter fa-lg"></i></a>
+                    <a><i class="fab fa-pinterest fa-lg"></i></a>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+
+</main>

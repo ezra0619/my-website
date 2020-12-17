@@ -1,0 +1,50 @@
+
+<div id="projectsPage">
+  <app-mainpage-navbar></app-mainpage-navbar>
+
+    <div *ngFor="let liveProject of liveProjects" class="project">
+
+        <div class="projectDescription-container">
+            <div class="project-titles-container">
+              <h3 class="h3-mainpages">{{liveProject.projectName}}</h3>
+              <h3 class="h4-mainpages "><i>Client: </i>{{liveProject.company}}</h3>
+            </div>
+            <div class="technologies-container">
+                <img *ngFor="let technology of liveProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgName}} src="assets/{{technology.imgName}}" />
+            </div>
+          </div>
+
+        <div class="project-image-container">
+            <figure><a href={{liveProject.siteLink}} target="_blank"><img class="project-image" src="assets/{{liveProject.projectImage}}" /></a></figure>
+        </div>
+        <div class="linksToProjects">
+            <a href={{liveProject.siteLink}} class="visitButton" target="_blank">Visit Page</a>
+        </div>
+
+    </div>
+    
+    <div *ngFor="let offlineProject of offlineProjects" class="project">
+        <div class="projectDescription-container">
+          <div class="project-titles-container">
+            <h3 class="h3-mainpages">{{offlineProject.name}}</h3>
+            <h3 class="h4-mainpages"><i>Inspiration: </i> <a href={{offlineProject.inspirationWebsite}} target="_blank">{{offlineProject.inspiration}}</a></h3>
+            <!-- <h3 class="h3main">{project.challenge}</h3> -->
+          </div>
+          <div class="technologies-container">
+            <img *ngFor="let technology of offlineProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgName}} src="assets/{{technology.imgName}}" />
+        </div>
+        </div>
+        <div class="project-image-container">
+            <figure>
+              <a href={{offlineProject.siteLink}} target="_blank">
+                <img class="project-image" src="assets/{{offlineProject.projectImage}}" />
+              </a>
+            </figure>
+        </div>
+        <div class="linksToProjects">
+            <a routerLink={{offlineProject.siteLink}} class="visitButton" target="_blank">Visit Page</a>
+            <a href={{offlineProject.gitHubLink}} class="codeButton" target="_blank">See Code <i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+</div>

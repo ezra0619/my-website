@@ -1,0 +1,226 @@
+
+#huddle-landing-page-single-introductory-section{
+
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("../../../assets/chEleven-huddle-landing-page-with-sg-intr-section/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    h2{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; //400
+        padding-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+
+
+    .huddle-logo-section {
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .huddle-main-content-section{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .huddle-image-section{
+            width: 55%;
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    
+        .huddle-text-section{
+            width: 45%;
+            padding-left: 40px;
+            padding-right: 20px;
+
+            .register-button {
+                padding: 10px 60px;
+                color: grey;
+                background: white;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                border: none;
+                border-radius: 40px;
+                font-size: 18px;
+                outline: none
+            }
+        }
+    }
+
+    .social-media-section {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon-container {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+
+            /* unvisited link */
+            a:link {
+                color: white;
+            }
+              
+            /* visited link */
+            a:visited {
+                color: white;
+            }
+              
+            /* mouse over link */
+            a:hover {
+                color: black;
+            }
+              
+              /* selected link */
+            a:active {
+                color: black;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1080px){
+
+    #huddle-landing-page-single-introductory-section{
+
+        // height: auto;
+
+        .huddle-logo-section {
+            margin-bottom: 40px;
+        }
+
+        .huddle-main-content-section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+    
+            .huddle-image-section{
+                width: 70%;
+                padding-bottom: 40px;
+            }
+        
+            .huddle-text-section{
+                text-align: center;
+                width: 70%;
+                height: auto;
+                padding-left: 0px;
+                padding-right: 0px;
+    
+                .register-button {
+                    width: 40%;
+                    padding: 15px 60px;
+                }
+            }
+        }
+    
+        .social-media-section {
+            justify-content: center;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media(max-width: 768px){
+
+    #huddle-landing-page-single-introductory-section{
+
+        height: auto;
+    }
+}
+
+
+@media(max-width: 700px){
+    
+    #huddle-landing-page-single-introductory-section{
+
+        height: auto;
+        background-image: url("../../../assets/chEleven-huddle-landing-page-with-sg-intr-section/bg-mobile.svg");
+        background-size: 100%;
+        .huddle-logo-section {
+            margin-bottom: 40px;
+        }
+
+        .huddle-main-content-section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+    
+            .huddle-image-section{
+                width: 90%;
+                padding-bottom: 40px;
+            }
+        
+            .huddle-text-section{
+                text-align: center;
+                width: 90%;
+                height: auto;
+                padding-left: 0px;
+                padding-right: 0px;
+    
+                .register-button {
+                    width: 80%;
+
+                }
+            }
+        }
+    
+        .social-media-section {
+            justify-content: center;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media(max-width: 440px){
+    #huddle-landing-page-single-introductory-section{
+        font-size:20px;
+    }
+}
+
+@media(max-width: 300px){
+    #huddle-landing-page-single-introductory-section{
+        .huddle-logo-section {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

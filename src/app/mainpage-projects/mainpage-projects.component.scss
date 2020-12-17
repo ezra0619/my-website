@@ -1,0 +1,159 @@
+
+$mainFontFamily: 'Poppins', sans-serif;
+$buttonFontFamily: 'Poppins', sans-serif;
+$buttonFontColor: #DFDCE3;
+$mainPageBackgroundColor:#d6edfdaf;
+
+    //Projects Page
+
+    #projectsPage {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background: rgb(227,242,254);
+        background: linear-gradient(165deg, rgba(227,242,254,1) 40%, rgba(103,142,207,1) 79%);
+        padding-bottom: 50px;
+        .project {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.75);
+            padding: 30px 40px;
+
+            .projectDescription-container {
+                // min-width: 200px;
+                // width: 380px;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .project-titles-container{
+                    width: 100%;
+                }
+                .technologies-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                }
+            }
+
+            .project-image-container {
+                width: 80%;
+                height: auto;
+                .project-image {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    box-shadow: 0px 3px 20px -1px rgba(0,0,0,0.75);
+                }
+                
+                figure {
+                    overflow: hidden;
+                    border-radius: 10px;
+                    position: relative;
+                }
+            }
+
+            .project-image-container figure::before {
+                position: absolute;
+                top: 0;
+                left: -75%;
+                z-index: 2;
+                display: block;
+                content: '';
+                width: 50%;
+                height: 100%;
+                background: -webkit-linear-gradient(left, rgba(22, 195, 195, 0.3) 0%, rgba(40,107,157, 0.6) 100%);
+                background: linear-gradient(to right, rgba(22,195,195, 0.3) 0%, rgba(40,107,157, 0.6) 100%);
+                -webkit-transform: skewX(-25deg);
+                transform: skewX(-25deg);
+            }
+            .project-image-container figure:hover::before {
+                -webkit-animation: shine 1s;
+                animation: shine 1s;
+            }
+
+            @-webkit-keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+
+            @keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+
+            .linksToProjects{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                .visitButton,
+                .codeButton {
+                    display: block;
+                    align-self: flex-end;
+                    color: white;
+                    width: 100%;
+                    border: none;
+                    border-radius: 4px;
+                    margin: 2px 0 3px 0;
+                    padding: 3px;
+                    font-weight: 500;
+                    background: rgb(40,107,157);
+                    background: linear-gradient(347deg, rgba(40,107,157,1) 43%, rgba(22,195,195,1) 100%);
+                    text-decoration: none;
+                    text-align: center;
+                }
+                .visitButton{
+                    margin-top: 18px;
+                }
+
+                .visitButton:hover,
+                .codeButton:hover{
+                    background: rgba(22,195,195,1);
+                    background: linear-gradient(347deg, rgba(22,195,195,1) 43%, rgba(40,107,157,1) 100%);
+                }
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .project {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .project {
+                .project-image-container {
+                    width: 90%;
+                }
+    
+                .linksToProjects{
+                    width: 90%;
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            .project {
+                .project-image-container {
+                    width: 100%;
+                }
+    
+                .linksToProjects{
+                    width: 100%;
+                }
+            }
+        }
+    }

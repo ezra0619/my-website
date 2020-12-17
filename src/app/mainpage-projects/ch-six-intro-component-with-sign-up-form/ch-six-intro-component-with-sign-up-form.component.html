@@ -1,0 +1,49 @@
+<div id="main-container-challengeSix">
+    <div id="left-container">
+      <div class="learn-to-code">
+        <h2>Learn to code by watching others</h2>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable.</p>
+      </div>
+    </div>
+          
+    <div id="right-container">
+              
+      <div class="try-for-free">
+        <button type="button" class="btn btn-primary btn-block"><span class="bold-text">Try it free 7 days</span> then $20/mo. thereafter</button>
+      </div>
+              
+      <div class="fill-form">
+        <form id="chSixContactForm" #chSixContactForm="ngForm" (ngSubmit)="chSixContactForm.form.valid">
+          
+          <input type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="chSixFormModel.firstName" #firstName="ngModel" placeholder="First Name" required/>
+          <div id="errorFirstName" *ngIf="chSixContactForm.submitted && firstName.invalid" [ngClass]="{ 'error': chSixContactForm.submitted && firstName.invalid}" class="text-right">
+            <div *ngIf="firstName.errors.required">First Name cannot be empty</div>
+          </div>
+          
+          <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="chSixFormModel.lastName" #lastName="ngModel" placeholder="Last Name" required/>
+          <div id="errorLastName" class="text-right" *ngIf="chSixContactForm.submitted && lastName.invalid" [ngClass]="{ 'error': chSixContactForm.submitted && lastName.invalid}">
+            <div *ngIf="lastName.errors.required">Last Name cannot be empty</div>
+          </div>
+          
+          <input type="email" id="emailAddress" name="email" class="form-control" [(ngModel)]="chSixFormModel.email" #email="ngModel" placeholder="Email Address" email required/>
+          <div id="errorEmailAddress" class="text-right" *ngIf="chSixContactForm.submitted && email.invalid" [ngClass]="{ 'error': chSixContactForm.submitted && email.invalid}">
+            <div *ngIf="email.errors.required">Email cannot be empty</div>
+            <div *ngIf="email.errors.email">Looks like this is not an email</div>
+          </div>
+        
+          <input type="password" id="password" name="password" class="form-control" [(ngModel)]="chSixFormModel.password" #password="ngModel" placeholder="Password" required/>
+          <div id="errorPassword" class="text-right" *ngIf="chSixContactForm.submitted && password.invalid" [ngClass]="{ 'error': chSixContactForm.submitted && password.invalid}">
+            <div *ngIf="password.errors.required">Password cannot be empty</div>
+          </div>
+          
+          <button type="submit" class="btn btn-success btn-block"><span class="bold-text">CLAIM YOUR FREE TRIAL</span></button> 
+              
+          <p class="text-center">By clicking the button, you are agreeing to our <span class="red-text bold-text">Terms and Services</span></p>
+        </form>
+      
+      </div>
+          
+    </div>
+      
+  </div>

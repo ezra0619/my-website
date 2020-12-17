@@ -1,0 +1,60 @@
+
+<div id="challenge-13-container">
+    <div class="header-banner">
+        <img src="assets/chThirteen-static-job-listings-master/bg-header-desktop.svg" />
+    </div>
+
+    <div class="job-listings-main-container">
+        <div id={{jobListing.id}} class="job-listing-container" *ngFor="let jobListing of jobListingsArray">
+            <div class="job-image">
+                <img src={{jobListing.logo}} />
+            </div>
+            <div class="job-details">
+                <div class="first-line-details">
+                    <div class="company">
+                        {{jobListing.company}}
+                    </div>
+                    <div 
+                        *ngIf="jobListing.new === true" 
+                        class="new-listing">
+                        NEW!
+                    </div>
+                    <div 
+                        *ngIf="jobListing.featured === true"
+                        class="featured-listing">
+                        FEATURED
+                    </div>
+                </div>
+                <div class="position">
+                    {{jobListing.position}}
+                </div>
+                <div class="last-line-details">
+                    <div class="time-stamp">
+                        {{jobListing.postedAt}}
+                    </div>
+                    <div class="contract">
+                        {{jobListing.contract}}
+                    </div>
+                    <div class="location">
+                        {{jobListing.location}}
+                    </div>
+                </div>
+            </div>
+            <div class="job-tech-details">
+                <div class="role">
+                    {{jobListing.role}}
+                </div>
+                <div class="level">
+                    {{jobListing.level}}
+                </div>
+                <div *ngFor="let language of jobListing.languages" class="languages">
+                    {{language}}
+                </div>
+                <div *ngFor="let tool of jobListing.tools" class="tools">
+                    {{tool}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

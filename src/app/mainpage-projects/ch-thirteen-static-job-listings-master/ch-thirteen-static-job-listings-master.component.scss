@@ -1,0 +1,74 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+
+.someWeirdClass {
+    color: hsl(180, 29%, 50%); // header banner background and New buttons
+    color: hsl(180, 52%, 96%); //background
+    color: hsl(180, 31%, 95%); //filter tables
+    color: hsl(180, 8%, 52%);
+    color: hsl(180, 14%, 20%); // featured buttons and position text color
+}
+
+#challenge-13-container {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Spartan', sans-serif;
+    height: auto;
+    width: 100%;
+
+    .listing-position-text {
+        color: hsl(180, 14%, 20%);
+        font-weight: 700;
+    }
+
+
+    .listing-new-bg-color {
+        background-color:  hsl(180, 29%, 50%);
+    }
+
+    .listing-featured-bg-color{
+        background-color: hsl(180, 14%, 20%);
+    }
+
+    .white-text {
+        color: white;
+    }
+
+    .cyan-text {
+        color: hsl(180, 29%, 50%);
+    }
+
+    .header-banner {
+        height: 100px;
+        width: 100%;
+        background-color: hsl(180, 29%, 50%);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .job-listings-main-container{
+        height: auto;
+        width: 100%;
+        background-color:  hsl(180, 52%, 96%);
+        .job-listing-container {
+            height: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+
+            .job-details {
+                display: flex;
+                flex-direction: column;
+                .first-line-details {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+}

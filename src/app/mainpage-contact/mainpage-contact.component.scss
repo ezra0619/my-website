@@ -1,0 +1,70 @@
+
+$mainFontFamily: 'Poppins', sans-serif;
+$buttonFontFamily: 'Poppins', sans-serif;
+
+    main {
+        background: rgb(227,242,254);
+        background: linear-gradient(165deg, rgba(227,242,254,1) 40%, rgba(103,142,207,1) 79%);
+    }
+    ///Contact me page
+    #contact-form-page-container{
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 73px);
+
+        #contact-information-container{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .h3-mainpages {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                align-self: flex-start;
+            }
+            #form-container {
+                display: flex;
+                flex-direction: column;
+                width:70%;
+                min-width: 300px;
+                align-items: center;
+                
+            }
+        }
+
+        #contact-image-container{
+            width: 50%;
+            height: 100%;
+
+            .mainPageSvg {
+                width: 90%;
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            #contact-information-container{
+                width: 100%;
+            }
+
+            #contact-image-container{
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #contact-information-container{
+                #form-container {
+                    min-width: auto;
+                    width: 90%;
+                }
+            }
+        }
+
+        @media (max-width: 400px) {
+            height: calc(100% - 149px)
+        }
+        
+    }

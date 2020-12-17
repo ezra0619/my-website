@@ -1,0 +1,146 @@
+//Home Page
+
+//mainFontFamily is used both for text and for button
+$mainFontFamily: 'Poppins', sans-serif;
+$textFontSize: 18px;
+
+    main{
+        background: rgb(227,242,254);
+        background: linear-gradient(165deg, rgba(227,242,254,1) 40%, rgba(103,142,207,1) 79%);
+        font-family: $mainFontFamily;
+        //height set by other class
+        width: 100%;
+        position: relative;
+    }
+    #homePage-main-container{
+        height: calc(100% - 73px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .svg-container{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img.mainPageSvg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .introduction-container {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // text-align: center;
+            a {
+                // margin-top: 20px;
+                transition: all .5s ease; 
+            }
+
+            button.btn--action span:before{
+                content: "\f0e0"; 
+            }
+        }
+
+        .social-media-links-container{
+            position: absolute;
+            height: calc(100% - 73px);
+            width: 4%;
+            right: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            a {
+                padding: 0px 0px 20px 0px;
+
+            }
+        }
+    
+    }
+
+
+    @media (max-width: 1200px) {
+
+        #homePage-main-container{
+            flex-direction: column;
+            .introduction-container {
+                width: 100%;
+                height: 95%;
+                order: 1
+            }
+            .svg-container{
+                display: none;
+            }
+
+            .social-media-links-container{
+                position: relative;
+                height: 4%;
+                width: 100%;
+                order: 2;
+                
+                flex-direction: row;
+                a {
+                    padding: 0px 10px 0px 10px;    
+                }
+            }
+
+            
+        }
+
+    }
+
+    @media (max-width: 1000px) {
+
+        #homePage-main-container{
+            flex-direction: column;
+            .introduction-container {
+                width: 100%;
+                height: 95%;
+                order: 1
+            }
+            .main-code-image-container{
+                display: none;
+            }
+
+            .social-media-links-container{
+                height: 7%;
+                width: 100%;
+                order: 2;
+                
+                flex-direction: row;
+                a {
+                    padding: 0px 10px 0px 10px;    
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width: 600px) {
+
+        #homePage-main-container{
+    
+            .introduction-container {
+                a {
+
+                    .btn--action{
+                        padding: 8px 18px;
+                    }
+                }
+            }
+        }        
+        
+    }
+
+    @media (max-width: 400px) {
+
+        #homePage-main-container{
+            height: calc(100% - 149px);
+        }
+    }

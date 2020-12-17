@@ -1,0 +1,441 @@
+
+#main-container-challengeThree {
+    font-family: 'Open Sans', sans-serif; /*body 400, 700*/
+    font-size: 20px;
+    color: hsl(208, 11%, 55%);
+    width: 100%;
+
+    h3.h3ChThree,
+    h2.h2ChThree, 
+    h4.h4ChThree{
+        font-family: 'Poppins', sans-serif; /* //headings 600 */
+        color: hsl(192, 100%, 9%);
+        padding: 0px 0px 10px 0px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    h2.h2ChThree {
+        font-size: 26px;
+    }
+
+    h4.h4ChThree {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /*Main page presentation*/
+    .section-one-container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../../../assets/chThree-huddle-landing-page/bg-hero-desktop.svg");
+        background-color: hsl(193, 100%, 96%);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+    #header, #page-presentation {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px 0 50px;
+    }
+    #header {
+        height: 10vh;
+        
+    }
+    #page-presentation {
+        height: 90vh;
+    }
+
+    #get-started {
+        width: 30vw;
+        color: hsl(192, 100%, 9%);
+    }
+    #illustration-mockup > img {
+        width: 55vw;
+        height: auto;
+    }
+
+    input[type=button]{
+        cursor: pointer;
+        border: none;
+        border-radius: 24px;
+        padding: 15px 20px;
+        -webkit-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+        -moz-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+        box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+    input[type=button]:focus {
+        outline:none;
+    }
+    #btn-try-it {
+        background-color: white;
+        color: black;
+        width: 200px;
+    }
+
+    #btn-getStarted{
+        margin-top: 20px;
+        background-color: hsl(322, 100%, 66%);
+        color: white;
+        width: 250px;
+    }
+
+    /* Section two - Presentation Cards */
+
+    .section-two-container {
+        position: relative;
+        margin-top: 100px;
+        margin-left:auto;
+        margin-right:auto;
+        width: 88vw;
+        display: flex;
+        flex-direction: column;
+
+        .presentation-card {
+            height: 35vh;
+            width: 80vw;
+            position: relative;
+            -webkit-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+            -moz-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+            box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            align-items: center;
+    
+            .card-text {
+                height: 100%;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px 20px 20px 50px;
+            }
+    
+            .card-image-container {
+                height: 100%;
+                display: flex;
+                .cardImage {
+                    max-width: 100%;
+                    max-height: 100%;
+                    align-self: center;
+                    justify-self: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 40px;
+                }
+            }
+        }
+    }
+
+    
+
+    /* Mini section */
+
+    .ready-to-build-your-community {
+        position: relative;
+        background-color: white;
+        z-index: 2;
+        top: 60px;
+        width: 40vw;
+        height:200px;
+        border-radius: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: hsl(192, 100%, 9%);
+        font-size: 26px;
+        -webkit-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+        -moz-box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+        box-shadow: 2px 2px 37px -23px rgba(128,141,153,1);
+    }
+    #btn-buildCommunity {
+        background-color: hsl(322, 100%, 66%);
+        color: white;
+        width: auto;
+        font-size: 20px;
+    }
+    /*Footer Section*/
+    .section-footer-container {
+        position: relative;
+        background-color: hsl(192, 100%, 9%);
+        width: 100%;
+        padding-top: 100px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+    }
+
+    .section-footer-container a:link,
+    .section-footer-container a:visited,
+    .section-footer-container a:hover,
+    .section-footer-container a:active {
+        color: white;
+        text-decoration: none;
+    }
+
+    .more-about-us li,
+    .social-media li{
+        list-style-type: none;
+    }
+
+    img.logo-bottom {
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+    .section-three-content {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-three-content li {
+        padding: 10px;
+    }
+    .main-contact {
+        width: 30%;
+    }
+    .more-about-us {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .Copyright{
+        margin-top: 50px;
+        align-self: flex-end;
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 10%;
+    }
+
+    .social-media-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer {
+        background-color: hsl(192, 100%, 9%);
+    }
+
+
+    @media(max-width: 1050px) {
+
+        .section-two-container{
+            .presentation-card {
+                display: flex;
+                flex-direction: column-reverse;
+                height: 50vh;
+
+                .card-text {
+                    width: 100%;
+                    height: 40%;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 0px 50px 6px 50px;
+
+                    h3.h3ChThree {
+                        text-align: center;
+                    }
+                }
+
+                .card-image-container {
+                    width: 100%;
+                    height: 55%;
+                    padding-top: 20px;
+                    img.cardImage {
+                        padding: 0px;
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+            
+        }
+        
+        #btn-getStarted{
+            width: 60%;
+            text-align: center;
+        }
+
+        #get-started {
+            width: 55vw;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #page-presentation {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            padding: 0 50px 0 50px;
+            text-align: center;
+        }
+
+        h2.h2ChThree {
+            text-align: center;
+        }
+
+        .ready-to-build-your-community {
+            width: 80%;
+        }
+
+        .section-footer-container {
+            height: auto;
+            
+        }
+        .section-three-content {
+            flex-direction: column;
+        }
+        .main-contact {
+            width: 100%;
+        }
+
+        .more-about-us {
+            flex-direction: column;
+        }
+    }
+
+    @media(max-width: 720px) {
+        .section-one-container{
+            height: auto;
+        }
+        #header {
+            padding: 0 20px 0 20px;
+        }
+        #get-started {
+            width: 100%;
+        }
+        
+        #illustration-mockup > img {
+            width: 72%;
+        }
+
+        #btn-getStarted {
+            width: 100%;
+        }
+
+        .Copyright {
+            align-self: center;
+        }
+    }
+
+    @media(max-width: 600px) {
+        #page-presentation{
+            height: auto;
+            padding: 40px 20px;
+        }
+        #btn-try-it {
+            width: auto;
+        }
+        #header {
+            height: 8vh;
+        }
+
+        .logo,
+        .logo-bottom {
+            height: 45%;
+            width: auto;
+        }
+        .section-footer-container {
+            height: auto;
+            font-size: 16px;
+        }
+
+    }
+
+    @media(max-width: 500px) {
+
+        #btn-getStarted{
+            font-size: 16px;
+        }
+        #btn-try-it {
+            font-size: 16px;
+        }
+        #btn-buildCommunity {
+            font-size: 16px;
+        }
+        .section-two-container {
+            .presentation-card {
+                .card-text {
+                    padding: 0px 10px;
+                    font-size: .7em;
+                    h3 {
+                        font-size: 1.4em; 
+                    }
+                }
+            }
+        }
+        .logo {
+            height: 36%;
+        }
+        #btn-try-it {
+            padding: 10px 20px;
+        }
+
+        .Copyright {
+            align-self: center;
+            margin-right: 0;
+        }
+        
+    }
+
+    @media(max-width: 430px) {
+        #btn-try-it {
+            width: auto;
+        }
+
+        .logo {
+            height: 30%;
+        }
+        .presentation-card {
+            align-items: flex-start;
+        }
+
+        #header {
+            padding: 0 10px 0 10px;
+        }
+
+        .ready-to-build-your-community {
+            width: 100%;
+        }
+
+        #btn-buildCommunity {
+            width: 80%;
+        }
+    }
+
+    @media(max-width: 376px) {
+        .section-two-container {
+            .presentation-card{
+                height: 65vh;
+                padding: 15px;
+            }
+        }
+    }
+    
+}
