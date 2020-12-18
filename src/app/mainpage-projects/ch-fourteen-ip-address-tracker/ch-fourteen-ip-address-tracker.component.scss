@@ -1,21 +1,5 @@
 
 
-// ## Colors
-
-// - Very Dark Gray: hsl(0, 0%, 17%)
-// - Dark Gray: hsl(0, 0%, 59%)
-
-// ## Typography
-
-// ### Body Copy
-
-// - Font size (text input): 18px
-
-// ### Font
-
-// - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
-// - Weights: 400, 500, 700
-
 #ip-address-tracker-main-container{
     height: 100vh;
     width: 100%;
@@ -24,7 +8,7 @@
     font-family: 'Rubik', sans-serif;
 
     .dark-grey-text-color{
-        color: hsl(0, 0%, 17%);
+        color: hsl(0, 33%, 1%);
         font-weight: 700;
     }
 
@@ -35,73 +19,134 @@
 
     h2 {
         color: white;
+        padding-bottom: 10px;
     }
-    .header-container{
-        position: relative;
+
+    input:focus,
+    input:active  {
+        outline: none;
+    }
+
+    .input-and-data-container {
         z-index: 1;
-        height: 30vh;
-        width: 100%;
         background: url(../../../assets/chFourteen-IP-address-tracker/pattern-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
+        height: 40vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-
-        .search-input-container{
-            width: 50%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            border-radius: 20px;
-            .search-input {
-                width: 85%;
-                height: auto;
-                padding: 20px;
-                border-radius: 20px 0 0 20px;
-                border: none;
-            }
-
-            .search-button {
-                width: 15%;
-                height: 100%;
-                background-color: black;
-                border: none;
-                border-radius: 0 20px 20px 0;
-            }
-        }
-    }
-
-    .display-search-parameters{
-        position: relative;
-        z-index: 2;
-        height: 130px;
-        top: calc((-130px / 2));
-        width: 80%;
-        margin: auto;
-        background-color: white;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
         justify-content: space-around;
-        padding: 20px;
-        border-radius: 20px;
-        border: 1px solid hsl(0, 0%, 59%);
-        .ip-address-information,
-        .location-information,
-        .timezone-information,
-        .isp-information{
+
+        .header-container{
+            height: auto;
+            width: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0 0 0;
+    
+            .search-input-container{
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                border-radius: 20px;
+                padding-bottom: 10px;
+                .search-input {
+                    width: calc(100% - 100px);
+                    height: auto;
+                    padding: 20px;
+                    border-radius: 20px 0 0 20px;
+                    border: none;
+
+                }
+    
+                .search-button {
+                    // width: 15%;
+                    width: auto;
+                    padding: 10px 20px;
+                    // height: 100%;
+                    background-color: black;
+                    border: none;
+                    border-radius: 0 20px 20px 0;
+                    color: white;
+                }
+
+            }
+            
+            .error-container {
+                color: red;
+            }
+        }
+        .display-search-parameters{
+            display: flex;
+            flex-direction: row;
+            z-index: 2;
+            height: 130px;
+            width: 80%;
+            background-color: white;
+            align-content: center;
+            justify-content: space-around;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid hsl(0, 0%, 59%);
+            .ip-address-information,
+            .location-information,
+            .timezone-information,
+            .isp-information{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    
+
+    .google-map-container {
+        z-index: 1;
+        height: 60vh;
+        width: 100%;
+    }
+
+    @media(max-width: 900px){
+        .input-and-data-container {
+            height: auto;
+            padding-bottom: 20px;
+            .header-container{
+            
+                .search-input-container{
+                    width: 80%;
+                }
+            }
+
+            .display-search-parameters{
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                align-content: center;
+                padding: 10px;
+
+                .ip-address-information,
+                .location-information,
+                .timezone-information{
+                    border-bottom: 1px solid hsl(0, 0%, 59%);
+                }
+
+                .ip-address-information,
+                .location-information,
+                .timezone-information,
+                .isp-information{
+                    width: 100%;
+                    align-items: center;
+                    p{
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
         }
     }
 
-    .google-map-container {
-        position: relative;
-        z-index: 1;
-        top: -130px;
-        height: 70vh;
-        width: 100%;
-    }
 }
+

@@ -18,6 +18,7 @@ import { ChElevenHuddleLandingPageWithSgIntrSectionComponent } from './mainpage-
 import { ChTwelveFyloLandingPageWithTwoColumnLayoutComponent } from './mainpage-projects/ch-twelve-fylo-landing-page-with-two-column-layout/ch-twelve-fylo-landing-page-with-two-column-layout.component';
 import { ChThirteenStaticJobListingsMasterComponent } from './mainpage-projects/ch-thirteen-static-job-listings-master/ch-thirteen-static-job-listings-master.component';
 import { ChFourteenIPAddressTrackerComponent } from './mainpage-projects/ch-fourteen-ip-address-tracker/ch-fourteen-ip-address-tracker.component';
+import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fifteen-youtube-on-repeat/ch-fifteen-youtube-on-repeat.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path: 'projects/FEM-fylo-landing-page-with-two-column-layout', component: ChTwelveFyloLandingPageWithTwoColumnLayoutComponent},
   {path: 'projects/FEM-static-job-listings-master', component: ChThirteenStaticJobListingsMasterComponent},
   {path: 'projects/FEM-ip-address-tracker', component: ChFourteenIPAddressTrackerComponent},
+  {path: 'projects/youtube-on-repeat', component: ChFifteenYoutubeOnRepeatComponent},
 
   {path: 'contact', component: MainpageContactComponent},
   {path: '**', pathMatch: 'full', component: PageNotFoundComponent},

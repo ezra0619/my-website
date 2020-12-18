@@ -48,7 +48,24 @@ export class ProjectsService {
 
     private offlineProjects: OfflineProject[] = [
       {
-        key: "challengeFourteem",
+        key: "challengeFifteen",
+        inspiration: "Own",
+        inspirationWebsite: "listenonrepeat.com",
+        name: "Youtube On Repeat",
+        challenge: '15th Challenge',
+        projectImage: "challengeFourteen.jpg",
+        technologies: [ 
+          {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
+          {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
+          {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
+          {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
+          {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
+        ],
+        siteLink: "/projects/youtube-on-repeat",
+        gitHubLink: "https://github.com/ezra0619/youtube-on-repeat"
+      },
+      {
+        key: "challengeFourteen",
         inspiration: "Front End Mentor",
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "IP Address Tracker",

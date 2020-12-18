@@ -1,48 +1,50 @@
 
 <div id="ip-address-tracker-main-container">
+    <div class="input-and-data-container">
+        <div class="header-container">
+            <h2>IP Address Tracker</h2>
+            <div class="search-input-container">
+                <input 
+                    class="search-input" 
+                    type="text" 
+                    [(ngModel)]="currentIP"
+                    placeholder="Search for any IP address"/>
+                <input 
+                    class="search-button" 
+                    type="button" 
+                    (click)="onSearchButtonPress(currentIP)"
+                    value="Search"/>
+            </div>
+            <div *ngIf="error === true && errorMessage !== ''" class="error-container">
+                <p>{{errorMessage}}</p>
+            </div>
 
-    <div class="header-container">
-        <h2>IP Address Tracker</h2>
-        <div class="search-input-container">
-            <input 
-                class="search-input" 
-                type="text" 
-                [(ngModel)]="currentIP"
-                placeholder="Search for any IP address or domain"/>
-            <input 
-                class="search-button" 
-                type="button" 
-                (click)="onSearchButtonPress(currentIP)"/>
         </div>
-        <div *ngIf="error === true && errorMessage !== ''" class="error-container">
-            <p>Oops! Something went wrong.</p>
-            <p>{{errorMessage}}</p>
-        </div>
-    </div>
-    <div class="display-search-parameters">
-        <div class="ip-address-information">
-            <p class="light-grey-text-color">IP ADDRESS</p>
-            <p class="dark-grey-text-color">
-                {{ipAddress}}
-            </p>
-        </div>
-        <div class="location-information">
-            <p class="light-grey-text-color">LOCATION</p>
-            <p class="dark-grey-text-color">
-                {{location}}
-            </p>
-        </div>
-        <div class="timezone-information">
-            <p class="light-grey-text-color">TIMEZONE</p>
-            <p class="dark-grey-text-color">
-                UTC {{timezone}}
-            </p>
-        </div>
-        <div class="isp-information">
-            <p class="light-grey-text-color">ISP</p>
-            <p class="dark-grey-text-color">
-                {{isp}}
-            </p>
+        <div class="display-search-parameters">
+            <div class="ip-address-information">
+                <p class="light-grey-text-color">IP ADDRESS</p>
+                <p class="dark-grey-text-color">
+                    {{ipAddress}}
+                </p>
+            </div>
+            <div class="location-information">
+                <p class="light-grey-text-color">LOCATION</p>
+                <p class="dark-grey-text-color">
+                    {{location}}
+                </p>
+            </div>
+            <div class="timezone-information">
+                <p class="light-grey-text-color">TIMEZONE</p>
+                <p class="dark-grey-text-color">
+                    UTC {{timezone}}
+                </p>
+            </div>
+            <div class="isp-information">
+                <p class="light-grey-text-color">ISP</p>
+                <p class="dark-grey-text-color">
+                    {{isp}}
+                </p>
+            </div>
         </div>
     </div>
     <div class="google-map-container">
@@ -50,14 +52,14 @@
             width="100%"
             height="100%"
             frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkD4CTLWdtTpSywlYBsTnGGloe3MssTD8&q=Mountain+View+California&center=37.40599,-122.078514" allowfullscreen>
+            src='https://www.google.com/maps/embed/v1/place?key=AIzaSyAkD4CTLWdtTpSywlYBsTnGGloe3MssTD8&q=34.08057,-118.07285' allowfullscreen>
         </iframe> -->
 
         <iframe
             width="100%"
             height="100%"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkD4CTLWdtTpSywlYBsTnGGloe3MssTD8&q=Zwolle,provincie+Pverijssel&center=52.5125,6.09444" allowfullscreen>
+            frameborder="0" style="border:0;"
+            [src]='googleMapLink | safe' allowfullscreen>
         </iframe>
     </div>
 </div>

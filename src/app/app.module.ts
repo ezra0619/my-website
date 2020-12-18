@@ -27,7 +27,8 @@ import { ChElevenHuddleLandingPageWithSgIntrSectionComponent } from './mainpage-
 import { ChTwelveFyloLandingPageWithTwoColumnLayoutComponent } from './mainpage-projects/ch-twelve-fylo-landing-page-with-two-column-layout/ch-twelve-fylo-landing-page-with-two-column-layout.component';
 import { ChThirteenStaticJobListingsMasterComponent } from './mainpage-projects/ch-thirteen-static-job-listings-master/ch-thirteen-static-job-listings-master.component';
 import { ChFourteenIPAddressTrackerComponent } from './mainpage-projects/ch-fourteen-ip-address-tracker/ch-fourteen-ip-address-tracker.component';
-import { RequestIPInfoService } from './mainpage-projects/ch-fourteen-ip-address-tracker/requestIPInfo.service';
+import { PipeSafeLink } from './mainpage-projects/ch-fourteen-ip-address-tracker/safeLink.pipe';
+import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fifteen-youtube-on-repeat/ch-fifteen-youtube-on-repeat.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ import { RequestIPInfoService } from './mainpage-projects/ch-fourteen-ip-address
     ChElevenHuddleLandingPageWithSgIntrSectionComponent,
     ChTwelveFyloLandingPageWithTwoColumnLayoutComponent,
     ChThirteenStaticJobListingsMasterComponent,
-    ChFourteenIPAddressTrackerComponent
+    ChFourteenIPAddressTrackerComponent,
+    PipeSafeLink,
+    ChFifteenYoutubeOnRepeatComponent
   ],
   imports: [
     BrowserModule,
