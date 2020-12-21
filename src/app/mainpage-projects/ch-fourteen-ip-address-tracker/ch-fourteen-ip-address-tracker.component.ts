@@ -14,11 +14,14 @@ export class ChFourteenIPAddressTrackerComponent implements OnInit {
 
   IPRequestInfoReceived: IpInformationModel; 
 
+  //two way data binding with the input type text in the template
   currentIP = '';
+
+  //values for error handling
   error = false;
   errorMessage = "";
   
-
+  //dummy data for first initialization
   ipAddress: string = '192.212.174.101';
   location: string = 'California, US';
   timezone: string = '-08:00';
@@ -35,7 +38,7 @@ export class ChFourteenIPAddressTrackerComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.googleMapLink)
+    // console.log(this.googleMapLink)
   }
 
   onSearchButtonPress(ip: string){
@@ -43,8 +46,6 @@ export class ChFourteenIPAddressTrackerComponent implements OnInit {
     this.RequestIPInfo.getIPInfo(ip).subscribe( ipInformation  => {
       // console.log(ipInformation);
       this.error = false;
-      // this.IPRequestInfoReceived = ipInformation;
-      // console.log(this.IPRequestInfoReceived);
       this.ipAddress = ipInformation.ip;
       this.location = ipInformation.location.region + ', ' + ipInformation.location.country;
       this.timezone = ipInformation.location.timezone;
@@ -52,7 +53,6 @@ export class ChFourteenIPAddressTrackerComponent implements OnInit {
       this.latitude = ipInformation.location.lat;
       this.longitude = ipInformation.location.lng;
       this.googleMapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.googleApiKey + '&q=' + this.latitude + ',' + this.longitude;
-      // console.log(this.googleMapLink);
     }, error => {
       console.log(error);
       this.error = true;

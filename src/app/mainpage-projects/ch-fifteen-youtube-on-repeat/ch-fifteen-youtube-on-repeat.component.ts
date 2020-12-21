@@ -12,6 +12,7 @@ import { environment } from './../../../environments/environment';
 })
 export class ChFifteenYoutubeOnRepeatComponent implements OnInit {
 
+//this will hold the information we will need to use in the template
   youtubeSearchResults: {
     videoId: string;
     videoTitle: string;
@@ -22,12 +23,19 @@ export class ChFifteenYoutubeOnRepeatComponent implements OnInit {
     };
   }[] = [];
 
+  //two way binding with the input type text in the template
   searchParameters = "";
+
+  //values required to generate the youtube iframe
   chosenYoutubeId: string = "";
   chosenYoutubeLink: string = "https://www.youtube.com/embed/" + this.chosenYoutubeId + "?autoplay=1&loop=1&playlist=" + this.chosenYoutubeId;
+  
+  //values used for error handling
   smthWasSearched: boolean = false;
-  error = null;
+  error = false;
   errorMessage = "";
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,10 +45,6 @@ export class ChFifteenYoutubeOnRepeatComponent implements OnInit {
   
   youtubeApi = new YoutubeDataAPI(this.apiKey);
 
-  parseSearchParameters(){
-    console.log(this.searchParameters);
-    console.log(this.searchParameters.replace(/\s/g, ','))
-  }
   search(){
     this.smthWasSearched = true;
     this.error = null;
