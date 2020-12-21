@@ -25,7 +25,8 @@ interface OfflineProject {
             imgName: string;
             imgAlt: string
         }[]; 
-    siteLink: string, gitHubLink: string
+    siteLink: string,
+    // gitHubLink: string
 }
 
 @Injectable()
@@ -62,7 +63,7 @@ export class ProjectsService {
           {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
         ],
         siteLink: "/projects/youtube-on-repeat",
-        gitHubLink: "https://github.com/ezra0619/youtube-on-repeat"
+        // gitHubLink: "https://github.com/ezra0619/youtube-on-repeat"
       },
       {
         key: "challengeFourteen",
@@ -79,25 +80,24 @@ export class ProjectsService {
           {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
         ],
         siteLink: "/projects/FEM-ip-address-tracker",
-        gitHubLink: "https://github.com/ezra0619/FEM-ip-address-tracker"
+        // gitHubLink: "https://github.com/ezra0619/FEM-ip-address-tracker"
       },
-      {
-        key: "challengeThirteen",
-        inspiration: "Front End Mentor",
-        inspirationWebsite: "https://www.frontendmentor.io/",
-        name: "Static Job Listings Master",
-        challenge: '13th Challenge',
-        projectImage: "challengeThirteen.jpg",
-        technologies: [ 
-          {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
-          {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
-          {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
-          {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
-          {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
-        ],
-        siteLink: "/projects/FEM-static-job-listings-master",
-        gitHubLink: "https://github.com/ezra0619/FEM-static-job-listings-master"
-      },
+      // {
+      //   key: "challengeThirteen",
+      //   inspiration: "Front End Mentor",
+      //   inspirationWebsite: "https://www.frontendmentor.io/",
+      //   name: "Static Job Listings Master",
+      //   challenge: '13th Challenge',
+      //   projectImage: "challengeThirteen.jpg",
+      //   technologies: [ 
+      //     {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
+      //     {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
+      //     {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
+      //     {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
+      //     {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
+      //   ],
+      //   siteLink: "/projects/FEM-static-job-listings-master",
+      // },
         {
           key: "challengeTwelve",
           inspiration: "Front End Mentor",
@@ -112,7 +112,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-fylo-landing-page-with-two-column-layout",
-          gitHubLink: "https://github.com/ezra0619/FEM-fylo-landing-page-with-two-column-layout"
+          // gitHubLink: "https://github.com/ezra0619/FEM-fylo-landing-page-with-two-column-layout"
         },
         {
           key: "challengeEleven",
@@ -128,7 +128,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-huddle-landing-page-single-introduction-section",
-          gitHubLink: "https://github.com/ezra0619/FEM-huddle-landing-page-single-introduction-section"
+          // gitHubLink: "https://github.com/ezra0619/FEM-huddle-landing-page-single-introduction-section"
         },
         {
           key: "challengeTen",
@@ -145,7 +145,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-coding-bootcamp-testimonials-slider",
-          gitHubLink: "https://github.com/ezra0619/FEM-coding-bootcamp-testimonials-slider"
+          // gitHubLink: "https://github.com/ezra0619/FEM-coding-bootcamp-testimonials-slider"
         },
         {
           key: "challengeNine",
@@ -162,7 +162,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-article-preview-component",
-          gitHubLink: "https://github.com/ezra0619/FEM-article-preview-component"
+          // gitHubLink: "https://github.com/ezra0619/FEM-article-preview-component"
         },
         {
           key: "challengeEight",
@@ -178,7 +178,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-fylo-data-storage",
-          gitHubLink: "https://github.com/ezra0619/FEM-fylo-data-storage"
+          // gitHubLink: "https://github.com/ezra0619/FEM-fylo-data-storage"
         },
         {
           key: "challengeSeven",
@@ -195,7 +195,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-url-shortening-api-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-url-shortening-api-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-url-shortening-api-master"
         },
         {
           key: "challengeSix",
@@ -213,7 +213,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-intro-component-with-signup-form-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-intro-component-with-signup-form-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-intro-component-with-signup-form-master"
         },
         {
           key: "challengeFive",
@@ -229,7 +229,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-base-apparel-coming-soon-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-base-apparel-coming-soon-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-base-apparel-coming-soon-master"
         },
         {
           key: "challengeFour",
@@ -244,7 +244,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-single-price-grid-component-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-single-price-grid-component-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-single-price-grid-component-master"
         },
         {
           key: "challengeThree",
@@ -260,7 +260,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-huddle-landing-page-with-alternating-feature-blocks-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-huddle-landing-page-with-alternating-feature-blocks-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-huddle-landing-page-with-alternating-feature-blocks-master"
         },
         {
           key: "challengeTwo",
@@ -276,7 +276,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-ping-coming-soon-page-master",
-          gitHubLink: "https://github.com/ezra0619/FEM-ping-coming-soon-page-master"
+          // gitHubLink: "https://github.com/ezra0619/FEM-ping-coming-soon-page-master"
         },
         {
           key: "challengeOne",
@@ -291,7 +291,7 @@ export class ProjectsService {
             {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
           ],
           siteLink: "/projects/FEM-four-card-feature-section",
-          gitHubLink: "https://github.com/ezra0619/FEM-four-card-feature-section"
+          // gitHubLink: "https://github.com/ezra0619/FEM-four-card-feature-section"
         }
       ]
         // {

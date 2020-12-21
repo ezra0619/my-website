@@ -11,7 +11,7 @@ export class MainpageProjectsComponent implements OnInit {
 
   //same interfaces as the objects described in the ProjectsService - interfaces are defined there;
   public liveProjects: {key: string, company: string, projectName: string, projectImage: string, technologies: {imgName: string, imgAlt: string}[], siteLink: string}[] = [];
-  public offlineProjects: {key: string, inspiration: string, inspirationWebsite: string, name: string, challenge: string, projectImage: string, technologies: {imgName: string, imgAlt: string}[], siteLink: string, gitHubLink: string}[] = [];
+  public offlineProjects: {key: string, inspiration: string, inspirationWebsite: string, name: string, challenge: string, projectImage: string, technologies: {imgName: string, imgAlt: string}[], siteLink: string}[] = [];
   // websiteDomain: string = "https:{key: string, inspiration: string, inspirationWebsite: string, name: string, challenge: string, projectImage: string, technologies: {imgName: string, imgAlt: string}[], siteLink: string, gitHubLink: string}[]//andreeabociu.com/#";
   
   constructor(private projectsService: ProjectsService) { }

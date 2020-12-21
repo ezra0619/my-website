@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { NgForm } from '@angular/forms';
+import { environment } from './../../../environments/environment';
 
 export class FormSubmitted {
   public name: string;
@@ -40,7 +41,7 @@ export class MainpageContactFormComponent implements OnInit {
   onSubmit(e: Event, form: NgForm){
     // console.log(e.target);
     e.preventDefault();
-    emailjs.sendForm('service_9gftull', 'contact_form', e.target as HTMLFormElement, 'user_q8Dj92OhqRa1QQHbzTY61')
+    emailjs.sendForm(environment.emailJsServiceID, 'contact_form', e.target as HTMLFormElement, environment.emailJsUserID)
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
         this.error = null;

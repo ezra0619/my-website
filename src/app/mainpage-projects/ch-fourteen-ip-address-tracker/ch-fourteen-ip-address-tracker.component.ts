@@ -2,6 +2,7 @@ import { Component, OnInit, Pipe } from '@angular/core';
 import { IpInformationModel } from './ip-information.model';
 import { RequestIPInfoService } from './requestIPInfo.service';
 import { PipeSafeLink } from './safeLink.pipe';
+import { environment } from './../../../environments/environment';
 
 @Component({
   selector: 'app-ch-fourteen-ip-address-tracker',
@@ -26,12 +27,11 @@ export class ChFourteenIPAddressTrackerComponent implements OnInit {
   longitude: number = -118.07285;
 
 
-  googleApiKey = 'AIzaSyAkD4CTLWdtTpSywlYBsTnGGloe3MssTD8';
+  //google Api Key
+  googleApiKey = environment.googleApiKey;
   googleMapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.googleApiKey + '&q=' + this.latitude + ',' + this.longitude;
 
-  constructor(private RequestIPInfo: RequestIPInfoService) { 
-
-  }
+  constructor(private RequestIPInfo: RequestIPInfoService) {}
 
 
   ngOnInit(): void {

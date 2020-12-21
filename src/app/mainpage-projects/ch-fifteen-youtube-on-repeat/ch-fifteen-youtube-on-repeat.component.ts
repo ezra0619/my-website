@@ -61,9 +61,9 @@ export class ChFifteenYoutubeOnRepeatComponent implements OnInit {
 
   },(err) => {
       this.smthWasSearched = true;
-      console.error(err);
+      console.error(err.message);
       this.error = true;
-      this.errorMessage = err;
+      this.errorMessage = err.message;
     })
   }
 
