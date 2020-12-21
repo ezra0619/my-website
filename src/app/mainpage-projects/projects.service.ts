@@ -53,7 +53,7 @@ export class ProjectsService {
         inspirationWebsite: "listenonrepeat.com",
         name: "Youtube On Repeat",
         challenge: '15th Challenge',
-        projectImage: "challengeFourteen.jpg",
+        projectImage: "challengeFifteen.png",
         technologies: [ 
           {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
           {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
@@ -70,7 +70,7 @@ export class ProjectsService {
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "IP Address Tracker",
         challenge: '14th Challenge',
-        projectImage: "challengeFourteen.jpg",
+        projectImage: "challengeFourteen.png",
         technologies: [ 
           {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
           {imgName: 'cssIcon.svg', imgAlt: 'CSS'},

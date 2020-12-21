@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  ytApiKey: 'AIzaSyA67YOext8mZ-cBr30lLetWXuOwyExIruA'
 };

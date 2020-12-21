@@ -3,12 +3,50 @@
 
     <div class="search-link-container">
         <div class="input-container">
-            <input class="search-input" type="text" placeholder="Search Youtube Link"/>
-            <input class="button-input" type="button" value="Search"/>
+            <input 
+                class="search-input" 
+                type="text" 
+                placeholder="Search Youtube Link" 
+                [(ngModel)]='searchParameters' />
+            <input 
+                class="button-input" 
+                type="button" 
+                value="Search"
+                (click)="search()"/>
         </div>
     </div>
 
-    <div class="youtube-link-container">
+    <div 
+        class="youtube-link-container"
+        *ngIf="chosenYoutubeId !== ''">
+            <iframe 
+                width="560" 
+                height="315" 
+                [src]='chosenYoutubeLink | safe'
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+    </div>
 
+    <div 
+        class="error"
+        *ngIf="error === true && smthWasSearched === true">
+        <h4>Youtube Search Results:</h4>
+        <p>{{errorMessage}}</p>
+    </div>
+    <div *ngIf="youtubeSearchResults.length > 0" class="youtube-link-results-container">
+        <h4>Youtube Search Results:</h4>
+        <div class="youtube-link-result" *ngFor="let link of youtubeSearchResults">
+            <div class="youtube-video-thumbnail">
+                <img src={{link.videoThumbnail.url}} width={{link.videoThumbnail.width}} height={{link.videoThumbnail.height}} />
+            </div>
+            <div class="youtube-video-title">
+                {{link.videoTitle}}
+            </div>
+            <div class="play-video-button">
+                <button (click)="playVideo(link.videoId)">Play On Repeat</button>
+            </div>
+        </div>
     </div>
 </div>
