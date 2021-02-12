@@ -1,59 +1,132 @@
 
-<div id="challenge-13-container">
-    <div class="header-banner">
+<div id="challenge-13-container" class="col">
+    
+    <div class="header-banner row">
         <img src="assets/chThirteen-static-job-listings-master/bg-header-desktop.svg" />
     </div>
+    <div class="listings-filter-container col-12">
+        <div class="listings-filter col-10 d-flex flex-row align-items-center">
+            <div class="filter d-flex col flex-wrap">
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                <div class="filter-value d-flex flex-row">
+                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
+                    <button class="clear-value">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear-filter col-2 d-flex justify-content-end">
+                <button>Clear</button>
+            </div>
+        </div>
+    </div>
 
-    <div class="job-listings-main-container">
-        <div id={{jobListing.id}} class="job-listing-container" *ngFor="let jobListing of jobListingsArray">
-            <div class="job-image">
-                <img src={{jobListing.logo}} />
+    <div class="job-listings-main-container row">
+        <div id={{jobListing.id}} class="job-listing-container col-10 d-flex flex-column flex-xl-row " *ngFor="let jobListing of jobListingsArray">
+            <div 
+                class="container-outline"
+                *ngIf="jobListing.featured === true">
             </div>
-            <div class="job-details">
-                <div class="first-line-details">
-                    <div class="company">
-                        {{jobListing.company}}
-                    </div>
-                    <div 
-                        *ngIf="jobListing.new === true" 
-                        class="new-listing">
-                        NEW!
-                    </div>
-                    <div 
-                        *ngIf="jobListing.featured === true"
-                        class="featured-listing">
-                        FEATURED
-                    </div>
+            <div class="main-job-information-container col-12 col-xl-5">
+                
+                <div class="job-image">
+                    <img src={{jobListing.logo}} />
                 </div>
-                <div class="position">
-                    {{jobListing.position}}
-                </div>
-                <div class="last-line-details">
-                    <div class="time-stamp">
-                        {{jobListing.postedAt}}
+                <div class="job-details">
+                    <div class="first-line-details">
+                        <div class="company cyan-text">
+                            {{jobListing.company}}
+                        </div>
+                        <div 
+                            *ngIf="jobListing.new === true" 
+                            class="listing-label new-listing">
+                            NEW!
+                        </div>
+                        <div 
+                            *ngIf="jobListing.featured === true"
+                            class="listing-label featured-listing">
+                            FEATURED
+                        </div>
                     </div>
-                    <div class="contract">
-                        {{jobListing.contract}}
+                    <div class="position listing-position-text">
+                        {{jobListing.position}}
                     </div>
-                    <div class="location">
-                        {{jobListing.location}}
+                    <div class="last-line-details">
+                        <div class="time-stamp">
+                            {{jobListing.postedAt}}
+                        </div>
+                        <div class="bullet-point">
+                            &#8226;
+                        </div>
+                        <div class="contract">
+                            {{jobListing.contract}}
+                        </div>
+                        <div class="bullet-point">
+                            &#8226;
+                        </div>
+                        <div class="location">
+                            {{jobListing.location}}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="job-tech-details">
-                <div class="role">
-                    {{jobListing.role}}
-                </div>
-                <div class="level">
-                    {{jobListing.level}}
-                </div>
-                <div *ngFor="let language of jobListing.languages" class="languages">
-                    {{language}}
-                </div>
-                <div *ngFor="let tool of jobListing.tools" class="tools">
-                    {{tool}}
+            
+            <div class="dividing-line-container d-xl-none col-12">
+                <div class="dividing-line"></div>
+            </div>
+
+            <div class="tech-details-container d-flex flex-row flex-xl-column align-items-start align-items-xl-end col-12 col-xl-7">
+                <div class="job-tech-details d-flex flex-wrap">
+                    <button class="role cyan-text">
+                        {{jobListing.role}}
+                    </button>
+                    <button class="level cyan-text">
+                        {{jobListing.level}}
+                    </button>
+                    <button *ngFor="let language of jobListing.languages" class="languages cyan-text">
+                        {{language}}
+                    </button>
+                    <button *ngFor="let tool of jobListing.tools" class="tools cyan-text">
+                        {{tool}}
+                    </button>
                 </div>
             </div>
+            
         </div>
     </div>
 

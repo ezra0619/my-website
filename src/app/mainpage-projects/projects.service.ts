@@ -82,22 +82,22 @@ export class ProjectsService {
         siteLink: "/projects/FEM-ip-address-tracker",
         // gitHubLink: "https://github.com/ezra0619/FEM-ip-address-tracker"
       },
-      // {
-      //   key: "challengeThirteen",
-      //   inspiration: "Front End Mentor",
-      //   inspirationWebsite: "https://www.frontendmentor.io/",
-      //   name: "Static Job Listings Master",
-      //   challenge: '13th Challenge',
-      //   projectImage: "challengeThirteen.jpg",
-      //   technologies: [ 
-      //     {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
-      //     {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
-      //     {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
-      //     {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
-      //     {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
-      //   ],
-      //   siteLink: "/projects/FEM-static-job-listings-master",
-      // },
+      {
+        key: "challengeThirteen",
+        inspiration: "Front End Mentor",
+        inspirationWebsite: "https://www.frontendmentor.io/",
+        name: "Static Job Listings Master",
+        challenge: '13th Challenge',
+        projectImage: "challengeThirteen.jpg",
+        technologies: [ 
+          {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
+          {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
+          {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
+          {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
+          {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
+        ],
+        siteLink: "/projects/FEM-static-job-listings-master",
+      },
         {
           key: "challengeTwelve",
           inspiration: "Front End Mentor",

@@ -16,7 +16,7 @@ import { ChNineArticlePreviewComponentComponent } from './mainpage-projects/ch-n
 import { ChTenCodingBootcampTestimonialsSliderComponent } from './mainpage-projects/ch-ten-coding-bootcamp-testimonials-slider/ch-ten-coding-bootcamp-testimonials-slider.component';
 import { ChElevenHuddleLandingPageWithSgIntrSectionComponent } from './mainpage-projects/ch-eleven-huddle-landing-page-with-sg-intr-section/ch-eleven-huddle-landing-page-with-sg-intr-section.component';
 import { ChTwelveFyloLandingPageWithTwoColumnLayoutComponent } from './mainpage-projects/ch-twelve-fylo-landing-page-with-two-column-layout/ch-twelve-fylo-landing-page-with-two-column-layout.component';
-// import { ChThirteenStaticJobListingsMasterComponent } from './mainpage-projects/ch-thirteen-static-job-listings-master/ch-thirteen-static-job-listings-master.component';
+import { ChThirteenStaticJobListingsMasterComponent } from './mainpage-projects/ch-thirteen-static-job-listings-master/ch-thirteen-static-job-listings-master.component';
 import { ChFourteenIPAddressTrackerComponent } from './mainpage-projects/ch-fourteen-ip-address-tracker/ch-fourteen-ip-address-tracker.component';
 import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fifteen-youtube-on-repeat/ch-fifteen-youtube-on-repeat.component';
 
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: 'projects/FEM-coding-bootcamp-testimonials-slider', component: ChTenCodingBootcampTestimonialsSliderComponent},
   {path: 'projects/FEM-huddle-landing-page-single-introduction-section', component: ChElevenHuddleLandingPageWithSgIntrSectionComponent},
   {path: 'projects/FEM-fylo-landing-page-with-two-column-layout', component: ChTwelveFyloLandingPageWithTwoColumnLayoutComponent},
-  // {path: 'projects/FEM-static-job-listings-master', component: ChThirteenStaticJobListingsMasterComponent},
+  {path: 'projects/FEM-static-job-listings-master', component: ChThirteenStaticJobListingsMasterComponent},
   {path: 'projects/FEM-ip-address-tracker', component: ChFourteenIPAddressTrackerComponent},
   {path: 'projects/youtube-on-repeat', component: ChFifteenYoutubeOnRepeatComponent},
 
