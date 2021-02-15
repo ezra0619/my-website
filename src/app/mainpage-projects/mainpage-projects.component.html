@@ -2,6 +2,9 @@
 <div id="projectsPage">
   <app-mainpage-navbar></app-mainpage-navbar>
 
+    <div class="project-count">
+      <h3 class="h4-mainpages">Current number of projects: {{liveProjects.length + offlineProjects.length}}</h3>
+    </div>
     <div *ngFor="let liveProject of liveProjects" class="project">
 
         <div class="projectDescription-container">
@@ -10,7 +13,7 @@
               <h3 class="h4-mainpages "><i>Client: </i>{{liveProject.company}}</h3>
             </div>
             <div class="technologies-container">
-                <img *ngFor="let technology of liveProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgName}} src="assets/{{technology.imgName}}" />
+                <img *ngFor="let technology of liveProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgAlt}} src="assets/{{technology.imgName}}" />
             </div>
           </div>
 
@@ -31,7 +34,7 @@
             <!-- <h3 class="h3main">{project.challenge}</h3> -->
           </div>
           <div class="technologies-container">
-            <img *ngFor="let technology of offlineProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgName}} src="assets/{{technology.imgName}}" />
+            <img *ngFor="let technology of offlineProject.technologies" class="imageResize40" alt={{technology.imgAlt}} title={{technology.imgAlt}} src="assets/{{technology.imgName}}" />
         </div>
         </div>
         <div class="project-image-container">

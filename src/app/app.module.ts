@@ -29,6 +29,7 @@ import { ChThirteenStaticJobListingsMasterComponent } from './mainpage-projects/
 import { ChFourteenIPAddressTrackerComponent } from './mainpage-projects/ch-fourteen-ip-address-tracker/ch-fourteen-ip-address-tracker.component';
 import { PipeSafeLink } from './mainpage-projects/ch-fourteen-ip-address-tracker/safeLink.pipe';
 import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fifteen-youtube-on-repeat/ch-fifteen-youtube-on-repeat.component';
+import { FilterPipe } from './mainpage-projects/ch-thirteen-static-job-listings-master/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fiftee
     ChThirteenStaticJobListingsMasterComponent,
     ChFourteenIPAddressTrackerComponent,
     PipeSafeLink,
-    ChFifteenYoutubeOnRepeatComponent
+    ChFifteenYoutubeOnRepeatComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

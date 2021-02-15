@@ -4,60 +4,27 @@
     <div class="header-banner row">
         <img src="assets/chThirteen-static-job-listings-master/bg-header-desktop.svg" />
     </div>
-    <div class="listings-filter-container col-12">
+    <div class="listings-filter-container col-12" *ngIf="filterArray.length > 0">
         <div class="listings-filter col-10 d-flex flex-row align-items-center">
             <div class="filter d-flex col flex-wrap">
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                <div class="filter-value d-flex flex-row">
-                    <div class="value cyan-text d-flex align-items-center">FrontEnd</div>
-                    <button class="clear-value">
+                <div class="filter-value d-flex flex-row" *ngFor="let filterValue of filterArray">
+                    <div class="value cyan-text d-flex align-items-center">{{filterValue}}</div>
+                    <button class="clear-value" (click)="removeFilterValue(filterValue)">
                         <i class="bi bi-x"></i>
                     </button>
                 </div>
             </div>
             <div class="clear-filter col-2 d-flex justify-content-end">
-                <button>Clear</button>
+                <button (click)="clearFilter()">Clear</button>
             </div>
         </div>
     </div>
 
     <div class="job-listings-main-container row">
-        <div id={{jobListing.id}} class="job-listing-container col-10 d-flex flex-column flex-xl-row " *ngFor="let jobListing of jobListingsArray">
+        <div 
+            id={{jobListing.id}} 
+            class="job-listing-container col-10 d-flex flex-column flex-xl-row " 
+            *ngFor="let jobListing of jobListingsArray | filter:filterArray">
             <div 
                 class="container-outline"
                 *ngIf="jobListing.featured === true">
@@ -112,16 +79,16 @@
 
             <div class="tech-details-container d-flex flex-row flex-xl-column align-items-start align-items-xl-end col-12 col-xl-7">
                 <div class="job-tech-details d-flex flex-wrap">
-                    <button class="role cyan-text">
+                    <button class="role cyan-text" (click)="addFilterValue(jobListing.role)">
                         {{jobListing.role}}
                     </button>
-                    <button class="level cyan-text">
+                    <button class="level cyan-text" (click)="addFilterValue(jobListing.level)">
                         {{jobListing.level}}
                     </button>
-                    <button *ngFor="let language of jobListing.languages" class="languages cyan-text">
+                    <button *ngFor="let language of jobListing.languages" class="languages cyan-text" (click)="addFilterValue(language)">
                         {{language}}
                     </button>
-                    <button *ngFor="let tool of jobListing.tools" class="tools cyan-text">
+                    <button *ngFor="let tool of jobListing.tools" class="tools cyan-text" (click)="addFilterValue(tool)">
                         {{tool}}
                     </button>
                 </div>

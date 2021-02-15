@@ -11,11 +11,28 @@ import { JobListingService } from './job-listings.service';
 export class ChThirteenStaticJobListingsMasterComponent implements OnInit {
 
   jobListingsArray: JobListingItem[];
-  constructor(private JobListingServie: JobListingService) { }
+
+  filterArray: String[] = [];
+  constructor(private JobListingService: JobListingService) { }
 
   ngOnInit(): void {
-    this.jobListingsArray = this.JobListingServie.getJobListings();
+    this.jobListingsArray = this.JobListingService.getJobListings();
   }
   
+  addFilterValue(filterValue){
+    if(this.filterArray.indexOf(filterValue) === -1){
+      this.filterArray.push(filterValue);
+    }else{
+      //else do nothing
+    }
+  }
+
+  clearFilter(){
+    this.filterArray = [];
+  }
+
+  removeFilterValue(filterValue: String){
+    this.filterArray.splice(this.filterArray.indexOf(filterValue),1);
+  }
 
 }

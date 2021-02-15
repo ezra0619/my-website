@@ -14,6 +14,9 @@ $mainPageBackgroundColor:#d6edfdaf;
         background: rgb(227,242,254);
         background: linear-gradient(165deg, rgba(227,242,254,1) 40%, rgba(103,142,207,1) 79%);
         padding-bottom: 50px;
+        .project-count {
+            padding-top: 30px;
+        }
         .project {
             background-color: white;
             display: flex;
@@ -29,8 +32,6 @@ $mainPageBackgroundColor:#d6edfdaf;
             padding: 30px 40px;
 
             .projectDescription-container {
-                // min-width: 200px;
-                // width: 380px;
                 width: 80%;
                 display: flex;
                 flex-direction: column;

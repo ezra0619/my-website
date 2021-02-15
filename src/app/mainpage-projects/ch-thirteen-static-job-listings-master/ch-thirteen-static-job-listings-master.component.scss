@@ -15,7 +15,8 @@
 }
 
 #challenge-13-container {
-
+    min-height: 100vh;
+    background-color:  hsl(180, 52%, 96%);
     .row {
         margin-right: 0;
         margin-left: 0;
@@ -51,7 +52,6 @@
     .listings-filter-container{
         position: relative;
         height: auto;
-        background-color:  hsl(180, 52%, 96%);
         .listings-filter {
             top: -40px;
             height: 100%;
@@ -109,7 +109,6 @@
         align-items: center;
         padding-top: 30px;
         padding-bottom: 20px;
-        background-color:  hsl(180, 52%, 96%);
 
         .job-listing-container {
             height: auto;
