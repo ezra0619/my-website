@@ -49,6 +49,23 @@ export class ProjectsService {
 
     private offlineProjects: OfflineProject[] = [
       {
+        key: "challengeSixteen",
+        inspiration: "Front End Mentor",
+        inspirationWebsite: "https://www.frontendmentor.io/",
+        name: "REST Countries API with color theme switcher",
+        challenge: '16th Challenge',
+        projectImage: "challengeSixteen.jpg",
+        technologies: [ 
+          {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
+          {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
+          {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
+          {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
+          {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
+        ],
+        siteLink: "/projects/FEM-rest-countries-api-with-color-theme-switcher",
+        // gitHubLink: "https://github.com/ezra0619/youtube-on-repeat"
+      },
+      {
         key: "challengeFifteen",
         inspiration: "Own",
         inspirationWebsite: "listenonrepeat.com",

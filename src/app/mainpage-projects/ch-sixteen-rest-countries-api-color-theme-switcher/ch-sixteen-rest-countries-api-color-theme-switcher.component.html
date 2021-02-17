@@ -1,0 +1,48 @@
+<div class="challenge-main-container" [ngStyle]="{'color': currentMode.textColor}"> 
+
+    <div 
+        class="top-nav-container row d-flex flex-row align-content-center justify-content-center"
+        [ngStyle]="{'background-color': currentMode.elementsBackground}">
+            <div class="top-nav-elements col-10 d-flex flex-row justify-content-between align-items-center">
+                <h3>Where in the world?</h3>
+                <div class="light-dark-mode-switcher-container">
+                    <button 
+                        class="light-dark-mode-switcher d-flex flex-row justify-content-between align-items-center"
+                        (click)="changeMode()"
+                        [ngStyle]="{'color': currentMode.textColor, 'background-color': currentMode.elementsBackground}">
+                        <i *ngIf="currentMode === darkMode" class="fas fa-sun"> </i> 
+                        <i *ngIf="currentMode === lightMode" class="far fa-moon"> </i> 
+                        {{currentMode.buttonText}}
+                    </button>
+                </div>
+            </div>
+    </div>
+    <div 
+        class="main-information-container row d-flex flex-row align-content-center justify-content-center"
+        [ngStyle]="{'background-color': currentMode.background}">
+            <div class="main-page-elements-container col-11">
+                <div class="filter-and-search-container">
+                    
+                </div>
+                <div class="rest-api-countries-container row d-flex flex-column">
+                    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-around">
+                        <div 
+                            class="country-container" 
+                            *ngFor="let country of countries"
+                            [ngStyle]="{'background-color': currentMode.elementsBackground}">
+                                <div class="country-image-container">
+                                    <img src={{country.flag}} />
+                                </div>
+                                <div class="country-information-container">
+                                    <h5>{{country.name}}</h5>
+                                    <p><span class="font-weight-bold-light">Population: </span>{{country.population}}</p>
+                                    <p><span class="font-weight-bold-light">Region: </span>{{country.region}}</p>
+                                    <p><span class="font-weight-bold-light">Capital: </span>{{country.capital}}</p>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+</div>

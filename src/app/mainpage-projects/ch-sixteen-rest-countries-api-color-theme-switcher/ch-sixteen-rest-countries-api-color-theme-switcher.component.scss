@@ -1,0 +1,134 @@
+
+.challenge-main-container {
+    font-family: 'Nunito Sans', sans-serif;
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .col-10,
+    .col-11,
+    .col-12 {
+        padding: 0;
+    }
+
+    .color {
+        color: hsl(209, 23%, 22%); //Dark Blue (Dark Mode Elements) DONE
+        color: hsl(207, 26%, 17%); //Very Dark Blue (Dark Mode Background) DONE
+        color: hsl(200, 15%, 8%); //Very Dark Blue (Light Mode Text) DONE
+        color: hsl(0, 0%, 52%); //Dark Gray (Light Mode Input) -- STAND BY
+        color: hsl(0, 0%, 98%); //Very Light Gray (Light Mode Background) DONE
+        color: hsl(0, 0%, 100%); //White (Dark Mode Text & Light Mode Elements) DONE
+    }
+    
+
+    .top-nav-container{
+        height: 100px;
+        .top-nav-elements {
+            height: 100%;
+            h3 {
+                font-weight: 800;
+            }
+            .light-dark-mode-switcher-container{
+                button.light-dark-mode-switcher{
+                    border: none;
+                    outline: none;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+
+                    .fa-sun,
+                    .fa-moon {
+                        padding-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-information-container{
+        .main-page-elements-container{
+            .rest-api-countries-container{
+                .all-countries-container{
+    
+                    .country-container{
+                        border-radius: 10px;
+                        width: 300px;
+                        height: auto;
+                        margin: 20px;
+                        .country-image-container{
+                            border-radius: 10px 10px 0 0;
+                            width: 100%;
+                            height: 200px;
+                            img{
+                                border-radius: 10px 10px 0 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+    
+                        .country-information-container{
+                            border-radius: 0 0 10px 10px;
+                            padding: 20px 20px 0 20px;
+                            width: 100%;
+                            height: 200px;
+                            h5 {
+                                font-weight: 800;
+                            }
+                            p{
+                                margin-bottom: 0.5rem;
+                            }
+    
+                            .font-weight-bold-light {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+ 
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Neutral
+
+// - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+// - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+// - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+// - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+// - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+// - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+// ## Typography
+
+// ### Body Copy
+
+// - Homepage Items: 14px
+// - Detail Page: 16px 
+
+// ### Fonts
+
+// - Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+// - Weights: 300, 600, 800
+
+// ## Icons
+
+// For the icons, you can use a font icon library. Don't worry if the icons that you choose don't look exactly like they do on the design.
+
+// Some suggestions can be found below:
+
+// - [Font Awesome](https://fontawesome.com)
+// - [IcoMoon](https://icomoon.io)
+// - [Ionicons](https://ionicons.com)
