@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CountriesRestApiResponseModel } from './countries-restapi-response.model';
-import { GetapicountriesService } from './get-api-countries.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ch-sixteen-rest-countries-api-color-theme-switcher',
@@ -8,8 +6,6 @@ import { GetapicountriesService } from './get-api-countries.service';
   styleUrls: ['./ch-sixteen-rest-countries-api-color-theme-switcher.component.scss']
 })
 export class ChSixteenRESTCountriesApiColorThemeSwitcherComponent implements OnInit {
-
-  countries: CountriesRestApiResponseModel[]= [];
 
   lightMode = {
     buttonText: "Dark Mode",
@@ -27,13 +23,8 @@ export class ChSixteenRESTCountriesApiColorThemeSwitcherComponent implements OnI
   
   currentMode = this.lightMode;
 
-  constructor(private getCountriesService: GetapicountriesService) { 
+  constructor() { 
 
-    this.getCountriesService.getCountries().subscribe(response => {
-      this.countries = response;
-      // console.log(response);
-      console.log(this.countries);
-    });
   }
 
   changeMode(){

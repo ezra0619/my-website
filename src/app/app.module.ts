@@ -31,6 +31,8 @@ import { PipeSafeLink } from './mainpage-projects/ch-fourteen-ip-address-tracker
 import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fifteen-youtube-on-repeat/ch-fifteen-youtube-on-repeat.component';
 import { FilterPipe } from './mainpage-projects/ch-thirteen-static-job-listings-master/filter.pipe';
 import { ChSixteenRESTCountriesApiColorThemeSwitcherComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/ch-sixteen-rest-countries-api-color-theme-switcher.component';
+import { CountriesMainGridComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/countries-main-grid/countries-main-grid.component';
+import { IndividualCountryComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/individual-country/individual-country.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { ChSixteenRESTCountriesApiColorThemeSwitcherComponent } from './mainpage
     PipeSafeLink,
     ChFifteenYoutubeOnRepeatComponent,
     FilterPipe,
-    ChSixteenRESTCountriesApiColorThemeSwitcherComponent
+    ChSixteenRESTCountriesApiColorThemeSwitcherComponent,
+    CountriesMainGridComponent,
+    IndividualCountryComponent
   ],
   imports: [
     BrowserModule,

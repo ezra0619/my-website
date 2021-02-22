@@ -1,0 +1,56 @@
+
+<div class="back-button-container">
+    <button (click)="backButton()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+</div>
+<div *ngIf="country" class="individual-country-container row d-flex flex-row justify-content-between">
+    <div class="flag-container col-5">
+        <img [src]="country.flag" [alt]="country.name"/>
+    </div>
+
+    <div class="country-details-container col-6 d-flex flex-column justify-content-around">
+        <div class="row">
+            <h3>{{country.name}}</h3>
+        </div>
+
+        <div class="row d-flex flex-row justify-content-between">
+            <div>
+                <p><span class="stressed-text">Native Name: </span> {{country.nativeName}}</p>
+                <p><span class="stressed-text">Population: </span>{{country.population}}</p>
+                <p><span class="stressed-text">Region: </span>{{country.region}}</p>
+                <p><span class="stressed-text">Sub Region: </span>{{country.subregion}}</p>
+                <p><span class="stressed-text">Capital: </span>{{country.capital}}</p>
+            </div>
+            <div>
+                <div class="text-margin d-flex flex-row">
+                    <span class="stressed-text">Top Level Domain: </span>
+                    <div class="topleveldomain" *ngFor="let topLevelDomain of country.topLevelDomain; index as i">
+                        {{topLevelDomain}}<span *ngIf="country.topLevelDomain.length !== i + 1">{{","}}</span>
+                    </div>
+                </div>
+                <div class="text-margin d-flex flex-row">
+                    <span class="stressed-text">Currencies: </span>
+                    <div class="currency" *ngFor="let currency of country.currencies; index as i">
+                        {{currency.name}}<span *ngIf="country.currencies.length !== i + 1">{{","}}</span>
+                    </div>
+                </div>
+                <div class="text-margin d-flex flex-row">
+                    <span class="stressed-text">Languages: </span>
+                    <div class="languages" *ngFor="let language of country.languages; index as i">
+                        {{language.name}}<span *ngIf="country.languages.length !== i + 1">{{","}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="d-flex flex-row align-items-center flex-wrap">
+                <div class="border-countries-text">
+                    <span class="stressed-text">Border Countries: </span>
+                </div>
+                <div class="border-country" *ngFor="let borderCountry of borderCountries">
+                    {{borderCountry}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

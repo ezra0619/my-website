@@ -1,0 +1,71 @@
+
+.back-button-container{
+    padding: 70px 0;
+    .back-button{
+        padding: 8px 40px;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+
+        .fas {
+            padding-right: 10px;
+        }
+    }
+
+    .back-button:focus,
+    .back-button:active {
+        outline: none;
+    }
+}
+
+.individual-country-container{
+    height: auto;
+
+    .flag-container{
+        height: 400px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .col {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .row{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .stressed-text {
+        font-weight: 600;
+    }
+
+    .languages,
+    .currency,
+    .topleveldomain{
+        padding-left: 5px;
+    }
+
+    .text-margin{
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-weight: 800;
+    }
+
+    .border-country{
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 5px 40px;
+        border: 1px solid gray;
+    }
+
+    .border-countries-text{
+        margin-bottom: 10px;
+    }
+}

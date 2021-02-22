@@ -46,44 +46,7 @@
 
     .main-information-container{
         .main-page-elements-container{
-            .rest-api-countries-container{
-                .all-countries-container{
-    
-                    .country-container{
-                        border-radius: 10px;
-                        width: 300px;
-                        height: auto;
-                        margin: 20px;
-                        .country-image-container{
-                            border-radius: 10px 10px 0 0;
-                            width: 100%;
-                            height: 200px;
-                            img{
-                                border-radius: 10px 10px 0 0;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-    
-                        .country-information-container{
-                            border-radius: 0 0 10px 10px;
-                            padding: 20px 20px 0 20px;
-                            width: 100%;
-                            height: 200px;
-                            h5 {
-                                font-weight: 800;
-                            }
-                            p{
-                                margin-bottom: 0.5rem;
-                            }
-    
-                            .font-weight-bold-light {
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                }
-            }
+            min-height: calc(100vh - 100px);
         }
  
     }

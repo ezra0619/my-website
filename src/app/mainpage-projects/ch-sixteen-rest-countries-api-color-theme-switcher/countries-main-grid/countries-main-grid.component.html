@@ -1,0 +1,24 @@
+<div class="filter-and-search-container">
+                    
+</div>
+<div class="rest-api-countries-container row d-flex flex-column">
+    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-around">
+        <div 
+            class="country-container" 
+            *ngFor="let country of countries"
+            [routerLink]="['country', country.name]"
+            >
+            <!-- [ngStyle]="{'background-color': currentMode.elementsBackground}" -->
+                <div class="country-image-container">
+                    <img src={{country.flag}} />
+                </div>
+                <div class="country-information-container">
+                    <h5>{{country.name}}</h5>
+                    <p><span class="font-weight-bold-light">Population: </span>{{country.population}}</p>
+                    <p><span class="font-weight-bold-light">Region: </span>{{country.region}}</p>
+                    <p><span class="font-weight-bold-light">Capital: </span>{{country.capital}}</p>
+                </div>
+        </div>
+    </div>
+    
+</div>
