@@ -1,29 +1,37 @@
-<div class="challenge-main-container" [ngStyle]="{'color': currentMode.textColor}"> 
+<div class="challenge-16-main-container ch16-text-color" [class]="themeService.presentTheme$ | async"> 
 
     <div 
-        class="top-nav-container row d-flex flex-row align-content-center justify-content-center"
-        [ngStyle]="{'background-color': currentMode.elementsBackground}">
-            <div class="top-nav-elements col-10 d-flex flex-row justify-content-between align-items-center">
+        class="top-nav-container row d-flex flex-row align-content-center justify-content-center
+        ch16-bg-secondary challenge-16-main-padding">
+            <div class="top-nav-elements col-12 d-flex flex-row justify-content-between align-items-center">
                 <h3>Where in the world?</h3>
                 <div class="light-dark-mode-switcher-container">
                     <button 
-                        class="light-dark-mode-switcher d-flex flex-row justify-content-between align-items-center"
-                        (click)="changeMode()"
-                        [ngStyle]="{'color': currentMode.textColor, 'background-color': currentMode.elementsBackground}">
-                        <i *ngIf="currentMode === darkMode" class="fas fa-sun"> </i> 
-                        <i *ngIf="currentMode === lightMode" class="far fa-moon"> </i> 
-                        {{currentMode.buttonText}}
+                    *ngIf="(themeService.presentTheme$ | async) == 'ch16-theme-light'"
+                        class="light-dark-mode-switcher d-flex flex-row justify-content-between align-items-center
+                        ch16-text-color ch16-bg-secondary"
+                        (click)="themeService.changeTheme('ch16-theme-dark')">
+                        <i class="far fa-moon"> </i> 
+                        Dark Mode
+                    </button>
+
+                    <button 
+                        *ngIf="(themeService.presentTheme$ | async) == 'ch16-theme-dark'"
+                        class="light-dark-mode-switcher d-flex flex-row justify-content-between align-items-center
+                        ch16-text-color ch16-bg-secondary"
+                        (click)="themeService.changeTheme('ch16-theme-light')">
+                        <i class="fas fa-sun"> </i> 
+                        Light Mode
                     </button>
                 </div>
             </div>
     </div>
     <div 
-        class="main-information-container row d-flex flex-row align-content-center justify-content-center"
-        [ngStyle]="{'background-color': currentMode.background}"
+        class="main-information-container row d-flex flex-row align-content-center justify-content-center
+        ch16-bg-primary challenge-16-main-padding"
         >
-            <div class="main-page-elements-container col-11">
+            <div class="main-page-elements-container col-12">
                 <router-outlet></router-outlet>
-                <!-- //theme switch https://stackblitz.com/edit/dark-mode-with-angular-and-css-variables?file=src%2Fapp%2Ftheme%2Fsymbols.ts -->
             </div>
     </div>
 </div>

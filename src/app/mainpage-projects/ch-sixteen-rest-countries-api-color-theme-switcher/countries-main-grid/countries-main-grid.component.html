@@ -1,14 +1,29 @@
-<div class="filter-and-search-container">
-                    
+<div class="filter-and-search-container d-flex flex-row justify-content-between">
+    <div class="search-input-container ch16-box-shadow d-flex flex-row align-items-center ch16-bg-secondary">
+        <i class="fas fa-search"></i>
+        <input type="text" class="search-field ch16-text-color" [(ngModel)]="filterByCountry" placeholder="Search for a country..."/>
+    </div> 
+
+    <div class="filter-container">
+        <div class="dropdown ch16-bg-secondary ch16-box-shadow">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter by Region
+            </button>
+            <ul class="dropdown-menu ch16-box-shadow" aria-labelledby="dropdownMenuButton1">
+                <li *ngFor="let region of regions">
+                    <a class="dropdown-item ch16-bg-secondary" (click)="selectRegionFilter(region)">{{region}}</a>
+                </li>
+            </ul>
+        </div>
+    </div> 
 </div>
 <div class="rest-api-countries-container row d-flex flex-column">
-    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-around">
+    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-between">
         <div 
-            class="country-container" 
-            *ngFor="let country of countries"
+            class="country-container ch16-box-shadow ch16-bg-secondary" 
+            *ngFor="let country of countries | ch16Filter:filterByCountry:'name' | ch16Filter:filterByRegion:'region'"
             [routerLink]="['country', country.name]"
             >
-            <!-- [ngStyle]="{'background-color': currentMode.elementsBackground}" -->
                 <div class="country-image-container">
                     <img src={{country.flag}} />
                 </div>

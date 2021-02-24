@@ -1,11 +1,36 @@
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.rest-api-countries-container,
+.filter-and-search-container {
+    font-size: 14px;
+}
+
+.filter-and-search-container{
+    .filter-container{
+        button {
+            font-size: 14px;
+        }
+    }
+}
+
 .rest-api-countries-container{
     .all-countries-container{
+
+        .country-container:focus,
+        .country-container:active{
+            outline: none;
+        }
 
         .country-container{
             border-radius: 10px;
             width: 300px;
             height: auto;
-            margin: 20px;
+            margin: 20px 0 20px 0;
+            outline: none;
             .country-image-container{
                 border-radius: 10px 10px 0 0;
                 width: 100%;
@@ -35,4 +60,72 @@
             }
         }
     }
+}
+
+.filter-and-search-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .search-input-container{
+        border-radius: 4px;
+        .fas{
+            padding-left: 20px;
+        }
+        .search-field{
+            border: none;
+            height: 100%;
+            padding: 0 20px;
+            outline: none;
+            background-color: transparent;
+        }
+
+        .search-field:active,
+        .search-field:focus {
+            outline: none
+        }
+
+        .search-field::placeholder {
+            color: var(--ch-16-placeholder-color);
+        }
+    }
+
+
+    .filter-container{
+        height: 100%;
+        .dropdown{
+            border-radius: 4px;
+        }
+    
+        // .dropdown-toggle::after {
+        //     margin-left: 17px;
+        // }
+    
+        .dropdown-menu {
+            background-color: var(--ch-16-secondary-bg);
+            color: var(--ch-16-text-color);
+            border: none;
+            min-width: 12rem;
+        }
+    
+        .btn {
+            padding: 14px 40px;
+        }
+
+        .btn,
+        .dropdown-item {
+            color: var(--ch-16-text-color);
+        }
+    
+        .dropdown-item:hover {
+            background-color: var(--ch-16-btn-color-hover);
+        }
+    
+        .btn:active,
+        .btn:focus,
+        .dropdown-item:active,
+        .dropdown-item:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    
 }

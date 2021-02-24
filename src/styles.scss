@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 $buttonFontFamily: 'Poppins', sans-serif;
 $buttonFontColor: #DFDCE3;
 
@@ -131,6 +132,54 @@ button.btn--action:hover span:before{
 button.btn--action:active {
     transform: translateY(5px);
 }
+
+//classes that only apply to project 16
+.ch16-theme-light{
+    --ch-16-main-bg: hsl(0, 0%, 98%);
+    --ch-16-secondary-bg: hsl(0, 0%, 100%);
+    --ch-16-text-color: hsl(200, 15%, 8%);
+    --ch-16-btn-color-hover: hsl(0, 0%, 93%);
+    --ch-16-box-shadow: rgba(0,0,0,0.50);
+    --ch-16-placeholder-color: gray;
+}
+
+.ch16-theme-dark{
+    --ch-16-main-bg: hsl(207, 26%, 17%);
+    --ch-16-secondary-bg: hsl(209, 23%, 22%);
+    --ch-16-text-color: hsl(0, 0%, 100%);
+    --ch-16-btn-color-hover: hsl(207, 26%, 17%);
+    --ch-16-box-shadow: rgba(0,0,0,0.50);
+    --ch-16-placeholder-color: hsl(0, 0%, 100%);
+}
+
+.ch16-bg-primary{
+    background-color: var(--ch-16-main-bg);
+}
+
+.ch16-bg-secondary{
+    background-color: var(--ch-16-secondary-bg);
+}
+
+.ch16-text-color{
+    color: var(--ch-16-text-color);
+}
+
+.ch16-btn-color-on-hover{
+    background-color: var(--ch-16-btn-color-hover);
+}
+
+.ch16-box-shadow {
+    -webkit-box-shadow: 0px 0px 10px -4px var(--ch-16-box-shadow);
+    -moz-box-shadow: 0px 0px 10px -4px var(--ch-16-box-shadow);
+    box-shadow: 0px 0px 10px -4px var(--ch-16-box-shadow);
+}
+
+
+.challenge-16-main-padding{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+//-----------------------
 
 //Resizing
 @media (max-width: 1350px) {

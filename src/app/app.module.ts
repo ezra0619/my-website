@@ -33,6 +33,7 @@ import { FilterPipe } from './mainpage-projects/ch-thirteen-static-job-listings-
 import { ChSixteenRESTCountriesApiColorThemeSwitcherComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/ch-sixteen-rest-countries-api-color-theme-switcher.component';
 import { CountriesMainGridComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/countries-main-grid/countries-main-grid.component';
 import { IndividualCountryComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/individual-country/individual-country.component';
+import { Ch16FilterPipe } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/ch-16-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { IndividualCountryComponent } from './mainpage-projects/ch-sixteen-rest-
     FilterPipe,
     ChSixteenRESTCountriesApiColorThemeSwitcherComponent,
     CountriesMainGridComponent,
-    IndividualCountryComponent
+    IndividualCountryComponent,
+    Ch16FilterPipe
   ],
   imports: [
     BrowserModule,

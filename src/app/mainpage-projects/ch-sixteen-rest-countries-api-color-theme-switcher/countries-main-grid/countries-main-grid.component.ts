@@ -10,16 +10,33 @@ import { GetapicountriesService } from '../get-api-countries.service';
 export class CountriesMainGridComponent implements OnInit {
 
   countries: CountriesRestApiResponseModel[]= [];
-  
+  regions = [];
+  filterByCountry = '';
+  filterByRegion = '';
+
   constructor(private getCountriesService: GetapicountriesService) {
     this.getCountriesService.getCountries().subscribe(response => {
       this.countries = response;
-      // console.log(response);
-      console.log(this.countries);
+      for(let i = 0; i < this.countries.length; i++){
+        //only if we cannot find the region in the array, we push it
+        if(this.regions.indexOf(this.countries[i].region) == -1){
+          this.regions.push(this.countries[i].region)
+        }
+      }
+
     });
   }
 
   ngOnInit(): void {
+  }
+
+  selectRegionFilter(region: string){
+    if(this.filterByRegion === region){
+      //removes the previous filter string
+      this.filterByRegion = '';
+    }else{
+      this.filterByRegion = region;
+    }
   }
 
 }
