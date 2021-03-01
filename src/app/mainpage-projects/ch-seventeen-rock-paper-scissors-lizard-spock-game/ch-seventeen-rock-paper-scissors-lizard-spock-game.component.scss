@@ -1,0 +1,244 @@
+
+// - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+// - Weights: 600, 700
+
+.colors{
+    color: hsl(39, 89%, 49%) to hsl(40, 84%, 53%); //Scissors Gradient
+    color: hsl(230, 89%, 62%) to hsl(230, 89%, 65%); //Paper Gradient
+    color: hsl(349, 71%, 52%) to hsl(349, 70%, 56%); //Rock Gradient
+    color: hsl(261, 73%, 60%) to hsl(261, 72%, 63%); //Lizard Gradient
+    color: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);  //Cyan
+
+    color: hsl(229, 25%, 31%); //Dark Text
+    color: hsl(229, 64%, 46%); //Score Text
+    color: hsl(217, 16%, 45%); //Header Outline
+    color: hsl(214, 47%, 23%) to hsl(237, 49%, 15%); //Radial Gradient
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#main-challenge-18-container{
+    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    .game-and-score-container{ 
+        background-color: transparent;
+        // padding-top: 60px;
+        // padding-bottom: 40px;
+        .game-and-score-information {
+            padding: 20px 30px;
+            border-radius: 10px;
+            border: 3px solid hsl(217, 16%, 45%);
+            .game-name{
+                color: white;
+                h4{
+                    margin-bottom: 0;
+                    font-weight: 700;
+                }
+            }
+
+            .score{
+                height: 100%;
+                width: 160px;
+                background-color: white;
+                border-radius: 10px;
+                .score-text{
+                    color: hsl(229, 64%, 46%); 
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+
+                .score-number{
+                    color: #545164;
+                    font-weight: 700;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .game-progression-container{
+        // padding-top: 100px;
+        height: auto;
+        .game-information-container{
+
+            width: 100%;
+            height: auto;
+
+            .all-choices{
+                //TO UNDO
+                // display: none;
+                //----
+                position: relative;
+                height: 350px;
+                width: 350px;
+                img.pentagon {
+                    height: 100%;
+                    width: auto;
+                }
+                
+                .gradient-border {
+                    position: absolute;
+                }
+                
+
+            }
+
+            .game-started{
+                .who-picked-text{
+                    color: white;
+                    font-weight: 700;
+                }
+                .gradient-border {
+                    position: relative;
+                }
+
+                .result-container{
+                    padding: 0 30px;
+                    .result-text{
+                        color: white;
+                    }
+
+                    button.play-again-button{
+                        background-color: white;
+                        color: hsl(237, 49%, 15%);
+                        border-radius: 10px;
+                        padding: 10px 30px;
+                        outline: none;
+                        border: none;
+                    }
+
+                    button.play-again-button:active,
+                    button.play-again-button:hover {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .rules {
+        .rules-button{
+            background-color: transparent;
+            color: white;
+            width: auto;
+            padding: 5px 20px; 
+            border: 3px solid hsl(217, 16%, 45%);
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .rules-button:active,
+        .rules-button:hover {
+            outline: none;
+        }
+    }
+
+    .circle {
+        // position: relative;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        img.sign-img {
+            height: 50%;
+            width: 50%;
+        }
+    }
+
+    .gradient-border {
+        // position: absolute;
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        padding: 22px;
+
+    }
+
+    .step-2plus-gradient-border{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        padding: 40px;
+        position: relative;
+    }
+
+    .scissors {
+        background: -webkit-linear-gradient(left top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    }
+
+    .scissors-1st-step-position{
+        top: -85px;
+        left: 101px;
+    }
+
+    .paper {
+        background: -webkit-linear-gradient(left top,  hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    }
+    .paper-1st-step-position{
+        top: 64px;
+        left: 300px;
+    }
+    .rock {
+        background: -webkit-linear-gradient(left top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    }
+
+    .rock-1st-step-position{
+        left: 229px;
+        bottom: -77px;
+    }
+    .lizard {
+        background: -webkit-linear-gradient(left top, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    }
+
+    .lizard-1st-step-position{
+        left: -9px;
+        bottom: -77px;
+    }
+    .spock{
+        background: -webkit-linear-gradient(left top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    }
+    .spock-1st-step-position{
+        top: 64px;
+        left: -93px;
+    }
+}
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1366px
+
+// ## Colors
+
+// ### Primary
+
+// - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+// - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+// - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+// - Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+// - Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+// ### Neutral
+
+// - Dark Text: hsl(229, 25%, 31%)
+// - Score Text: hsl(229, 64%, 46%)
+// - Header Outline: hsl(217, 16%, 45%)
+
+// ### Background
+
+// - Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
+
+// ## Fonts
+
+// - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+// - Weights: 600, 700

@@ -34,6 +34,8 @@ import { ChSixteenRESTCountriesApiColorThemeSwitcherComponent } from './mainpage
 import { CountriesMainGridComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/countries-main-grid/countries-main-grid.component';
 import { IndividualCountryComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/individual-country/individual-country.component';
 import { Ch16FilterPipe } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/ch-16-filter.pipe';
+import { ChSeventeenRockPaperScissorsLizardSpockGameComponent } from './mainpage-projects/ch-seventeen-rock-paper-scissors-lizard-spock-game/ch-seventeen-rock-paper-scissors-lizard-spock-game.component';
+import { SortByDiffPipe } from './sort-by-diff.pipe';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { Ch16FilterPipe } from './mainpage-projects/ch-sixteen-rest-countries-ap
     ChSixteenRESTCountriesApiColorThemeSwitcherComponent,
     CountriesMainGridComponent,
     IndividualCountryComponent,
-    Ch16FilterPipe
+    Ch16FilterPipe,
+    ChSeventeenRockPaperScissorsLizardSpockGameComponent,
+    SortByDiffPipe
   ],
   imports: [
     BrowserModule,

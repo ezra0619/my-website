@@ -22,6 +22,7 @@ import { ChFifteenYoutubeOnRepeatComponent } from './mainpage-projects/ch-fiftee
 import { ChSixteenRESTCountriesApiColorThemeSwitcherComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/ch-sixteen-rest-countries-api-color-theme-switcher.component';
 import { CountriesMainGridComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/countries-main-grid/countries-main-grid.component';
 import { IndividualCountryComponent } from './mainpage-projects/ch-sixteen-rest-countries-api-color-theme-switcher/individual-country/individual-country.component';
+import { ChSeventeenRockPaperScissorsLizardSpockGameComponent } from './mainpage-projects/ch-seventeen-rock-paper-scissors-lizard-spock-game/ch-seventeen-rock-paper-scissors-lizard-spock-game.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
     {path: '', component: CountriesMainGridComponent},
     {path: 'country/:country', component: IndividualCountryComponent}
   ]},
+  {path: 'projects/FEM-rock-paper-scissors-lizard-spock-game', component: ChSeventeenRockPaperScissorsLizardSpockGameComponent},
   {path: 'contact', component: MainpageContactComponent},
   {path: '**', pathMatch: 'full', component: PageNotFoundComponent},
 ];

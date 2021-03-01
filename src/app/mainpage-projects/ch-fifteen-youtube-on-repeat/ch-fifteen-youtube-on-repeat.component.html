@@ -1,15 +1,15 @@
 
-<div id="youtube-on-repeat-main-container">
+<div id="youtube-on-repeat-main-container" class="min-vh-100 w-100">
 
-    <div class="search-link-container">
-        <div class="input-container">
+    <div class="search-link-container row w-100 d-flex flex-column align-items-center justify-content-center">
+        <div class="input-container col-md-8 col-sm-11 d-flex flex-row align-items-center justify-content-center">
             <input 
-                class="search-input" 
+                class="search-input col-9" 
                 type="text" 
                 placeholder="Search Youtube Link" 
                 [(ngModel)]='searchParameters' />
             <input 
-                class="button-input" 
+                class="button-input col-3" 
                 type="button" 
                 value="Search"
                 (click)="search()"/>

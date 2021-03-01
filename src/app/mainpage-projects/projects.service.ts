@@ -15,6 +15,7 @@ interface LiveProject {
 
 interface OfflineProject {
     key: string;
+    difficulty: number;
     inspiration: string;
     inspirationWebsite: string;
     name: string; 
@@ -33,6 +34,13 @@ interface OfflineProject {
 export class ProjectsService {
 
 
+  //difficulty levels dex
+  //newbie - 1
+  //junior - 2
+  //intermediate - 3
+  //advanced - 4
+  //guru - 5 
+
     private liveProjects: LiveProject[] = [
         {
           key: "appFarmWeb",
@@ -49,7 +57,26 @@ export class ProjectsService {
 
     private offlineProjects: OfflineProject[] = [
       {
+        key: "challengeSeventeen",
+        difficulty: 4,
+        inspiration: "Front End Mentor",
+        inspirationWebsite: "https://www.frontendmentor.io/",
+        name: "Rock, Paper, Scissors, Lizard, Spock game",
+        challenge: '17th Challenge',
+        projectImage: "challengeSeventeen.jpg",
+        technologies: [ 
+          {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
+          {imgName: 'cssIcon.svg', imgAlt: 'CSS'},
+          {imgName: 'sassIcon.svg', imgAlt: 'SASS'},
+          {imgName: 'jsIcon.svg', imgAlt: 'JavaScript'},
+          {imgName: 'angularIcon.svg', imgAlt: 'Angular'}
+        ],
+        siteLink: "/projects/FEM-rock-paper-scissors-lizard-spock-game",
+        // gitHubLink: "https://github.com/ezra0619/youtube-on-repeat"
+      },
+      {
         key: "challengeSixteen",
+        difficulty: 4,
         inspiration: "Front End Mentor",
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "REST Countries API with color theme switcher",
@@ -67,6 +94,7 @@ export class ProjectsService {
       },
       {
         key: "challengeFifteen",
+        difficulty: 3,
         inspiration: "Own",
         inspirationWebsite: "listenonrepeat.com",
         name: "Youtube On Repeat",
@@ -84,6 +112,7 @@ export class ProjectsService {
       },
       {
         key: "challengeFourteen",
+        difficulty: 3,
         inspiration: "Front End Mentor",
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "IP Address Tracker",
@@ -101,6 +130,7 @@ export class ProjectsService {
       },
       {
         key: "challengeThirteen",
+        difficulty: 3,
         inspiration: "Front End Mentor",
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "Static Job Listings Master",
@@ -117,6 +147,7 @@ export class ProjectsService {
       },
         {
           key: "challengeTwelve",
+          difficulty: 2,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Fylo Landing Page With Two Column Layout",
@@ -133,6 +164,7 @@ export class ProjectsService {
         },
         {
           key: "challengeEleven",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Huddle Landing Page With Single Introductory Section",
@@ -149,6 +181,7 @@ export class ProjectsService {
         },
         {
           key: "challengeTen",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Coding Bootcamp Testimonials Slider",
@@ -166,6 +199,7 @@ export class ProjectsService {
         },
         {
           key: "challengeNine",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Article Preview Component",
@@ -183,6 +217,7 @@ export class ProjectsService {
         },
         {
           key: "challengeEight",
+          difficulty: 2,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Fylo Data Storage Component",
@@ -199,6 +234,7 @@ export class ProjectsService {
         },
         {
           key: "challengeSeven",
+          difficulty: 3,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Url Shortening Api Master Page",
@@ -216,6 +252,7 @@ export class ProjectsService {
         },
         {
           key: "challengeSix",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Intro component with sign-up form",
@@ -234,6 +271,7 @@ export class ProjectsService {
         },
         {
           key: "challengeFive",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Base Apparel coming soon page",
@@ -250,6 +288,7 @@ export class ProjectsService {
         },
         {
           key: "challengeFour",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Single price grid component",
@@ -265,6 +304,7 @@ export class ProjectsService {
         },
         {
           key: "challengeThree",
+          difficulty: 2,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Huddle landing page with alternating feature blocks",
@@ -281,6 +321,7 @@ export class ProjectsService {
         },
         {
           key: "challengeTwo",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Ping single column coming soon page",
@@ -297,6 +338,7 @@ export class ProjectsService {
         },
         {
           key: "challengeOne",
+          difficulty: 1,
           inspiration: "Front End Mentor",
           inspirationWebsite: "https://www.frontendmentor.io/",
           name: "Four card feature section",
