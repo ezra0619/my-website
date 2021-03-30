@@ -1,4 +1,4 @@
-<div class="filter-and-search-container d-flex flex-row justify-content-between">
+<div class="filter-and-search-container d-flex flex-column flex-sm-column flex-md-row justify-content-sm-center justify-content-md-between">
     <div class="search-input-container ch16-box-shadow d-flex flex-row align-items-center ch16-bg-secondary">
         <i class="fas fa-search"></i>
         <input type="text" class="search-field ch16-text-color" [(ngModel)]="filterByCountry" placeholder="Search for a country..."/>
@@ -18,7 +18,8 @@
     </div> 
 </div>
 <div class="rest-api-countries-container row d-flex flex-column">
-    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-between">
+
+    <div class="all-countries-container row d-flex flex-row flex-wrap justify-content-center ">
         <div 
             class="country-container ch16-box-shadow ch16-bg-secondary" 
             *ngFor="let country of countries | ch16Filter:filterByCountry:'name' | ch16Filter:filterByRegion:'region'"
@@ -29,7 +30,7 @@
                 </div>
                 <div class="country-information-container">
                     <h5>{{country.name}}</h5>
-                    <p><span class="font-weight-bold-light">Population: </span>{{country.population}}</p>
+                    <p><span class="font-weight-bold-light">Population: </span>{{country.population | number:'1.0':'en-US'}}</p>
                     <p><span class="font-weight-bold-light">Region: </span>{{country.region}}</p>
                     <p><span class="font-weight-bold-light">Capital: </span>{{country.capital}}</p>
                 </div>

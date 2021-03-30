@@ -1,3 +1,12 @@
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col {
+    padding-right: 0;
+    padding-left: 0;
+}
 
 .back-button-container,
 .individual-country-container{
@@ -29,20 +38,23 @@
 
     .flag-container{
         height: 400px;
+        width: 500px;
+
+        @media (max-width: 650px){
+            width: 300px;
+            height: auto;
+        }
         img {
             height: 100%;
             width: 100%;
         }
     }
 
-    .col {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .row{
-        margin-right: 0;
-        margin-left: 0;
+    .country-details-container {
+        @media (max-width: 1199px){
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
     }
 
     .stressed-text {

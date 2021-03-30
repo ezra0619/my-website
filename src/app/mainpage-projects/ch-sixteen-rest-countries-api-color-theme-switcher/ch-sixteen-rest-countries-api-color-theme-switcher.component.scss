@@ -1,4 +1,6 @@
 
+$maxWidth: 1440px;
+
 .challenge-16-main-container {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
@@ -14,11 +16,20 @@
 
     .top-nav-container{
         height: 100px;
+
         .top-nav-elements {
+            max-width: $maxWidth;
             height: 100%;
             font-size: 14px;
             h3 {
                 font-weight: 800;
+                font-size: 1.75rem;
+                margin-bottom: 0;
+            }
+            @media (max-width: 800px) {
+                h3 {
+                    font-size: 1.1rem
+                }
             }
             .light-dark-mode-switcher-container{
                 button.light-dark-mode-switcher{
@@ -26,7 +37,9 @@
                     outline: none;
                     font-weight: 600;
                     font-size: 1.1rem;
-
+                    @media (max-width: 800px) {
+                        font-size: 1rem
+                    }
                     .fa-sun,
                     .fa-moon {
                         padding-right: 6px;
@@ -37,7 +50,9 @@
     }
 
     .main-information-container{
+        
         .main-page-elements-container{
+            max-width: $maxWidth;
             min-height: calc(100vh - 100px);
         }
  

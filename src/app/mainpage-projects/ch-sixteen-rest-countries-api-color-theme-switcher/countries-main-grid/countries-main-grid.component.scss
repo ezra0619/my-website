@@ -29,7 +29,7 @@
             border-radius: 10px;
             width: 300px;
             height: auto;
-            margin: 20px 0 20px 0;
+            margin: 20px 30px 20px 10px;
             outline: none;
             .country-image-container{
                 border-radius: 10px 10px 0 0;
@@ -67,6 +67,8 @@
     padding-bottom: 40px;
     .search-input-container{
         border-radius: 4px;
+        height: 51px;
+
         .fas{
             padding-left: 20px;
         }
@@ -91,10 +93,14 @@
 
     .filter-container{
         height: 100%;
+        width: 194px;
         .dropdown{
             border-radius: 4px;
         }
     
+        @media (max-width: 767px){
+            margin-top: 30px;
+        }
         // .dropdown-toggle::after {
         //     margin-left: 17px;
         // }
