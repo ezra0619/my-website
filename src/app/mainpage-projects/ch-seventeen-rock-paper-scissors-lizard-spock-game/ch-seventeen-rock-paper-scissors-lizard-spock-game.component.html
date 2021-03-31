@@ -1,8 +1,8 @@
 <div id="main-challenge-18-container" class="row min-vh-100 d-flex flex-column justify-content-around">
 
     <div class="row game-and-score-container d-flex flex-row justify-content-center">
-        <div class="game-and-score-information col-xl-6 col-lg-8 col-sm-11 d-flex flex-row justify-content-between">
-            <div class="game-name d-flex flex-column">
+        <div class="game-and-score-information col-xl-6 col-lg-8 col-sm-11 col-11 d-flex flex-row justify-content-between">
+            <div class="game-name d-flex flex-column justify-content-center">
                 <h4>ROCK</h4>
                 <h4>PAPER</h4>
                 <h4>SCISSORS</h4>
@@ -22,11 +22,6 @@
 
         <div class="game-information-container row d-flex flex-row justify-content-center">
 
-            <!-- //PLAN 
-            //each step will be a separate component 
-            //the currentStatus game will be a service that will communicate to the app 
-            //what score is and at which step the user is -->
-        
             <!-- //STEP ONE -->
             <div class="all-choices" *ngIf="currentStep.showAllSigns"> 
                 <img class="pentagon" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/bg-pentagon.svg" />
@@ -43,13 +38,13 @@
 
             </div>
 
-            <!-- //STEP TWO TO FOUR -->
-            <div class="game-started d-flex flex-row justify-content-around" *ngIf="!currentStep.showAllSigns">
-                <div class="player-choice-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="who-picked-text">
+            <!-- //STEP TWO -->
+            <div class="game-started d-flex flex-row justify-content-around flex-wrap" *ngIf="!currentStep.showAllSigns">
+                <div class="player-choice-container d-flex flex-column align-items-center justify-content-center order-0 order-md-0">
+                    <div class="who-picked-text order-1 order-md-0">
                         <h3>YOU PICKED</h3>
                     </div>
-                    <div class="step-2plus-gradient-border" [ngClass]="youPicked">
+                    <div class="step-2plus-gradient-border order-0 order-md-1" [ngClass]="youPicked">
                         <div class="circle d-flex flex-row align-items-center justify-content-center">
                             <img class="sign-img" [src]="youPickedSVG" />
                         </div>
@@ -57,7 +52,7 @@
                 </div>
 
                 <div 
-                    class="result-container d-flex flex-column align-items-center justify-content-center"
+                    class="result-container d-flex flex-column align-items-center justify-content-center order-2 order-md-1"
                     *ngIf="this.currentStep.showGameResult"
                 >
                     <div class="result-text">
@@ -71,11 +66,17 @@
                     </div>
                 </div>
 
-                <div class="house-choice-container d-flex flex-column align-items-center justify-content-center">
-                    <div class="who-picked-text">
+                <div class="house-choice-container d-flex flex-column align-items-center justify-content-center order-1 order-md-2">
+                    <div class="who-picked-text order-1 order-md-0">
                         <h3>THE HOUSE PICKED</h3>
                     </div>
-                    <div class="step-2plus-gradient-border" [ngClass]="theHousePicked" *ngIf="this.currentStep.showHousePick">
+                    <div class="step-2plus-gradient-border order-0 order-md-1" [ngClass]="theHousePicked" *ngIf="!this.currentStep.showHousePick">
+                        <div class="circle beforeHousePicks">
+                            
+                        </div>
+                    </div>
+
+                    <div class="step-2plus-gradient-border order-0 order-md-1" [ngClass]="theHousePicked" *ngIf="this.currentStep.showHousePick">
                         <div class="circle d-flex flex-row align-items-center justify-content-center">
                             <img class="sign-img" [src]="theHousePickedSVG" />
                         </div>
@@ -88,45 +89,29 @@
     </div>
 
     <div class="rules row d-flex flex-row align-items-center justify-content-center">
-        <button class="rules-button">RULES</button>
+        <button class="rules-button" (click)="onShowRules()">RULES</button>
     </div>
 
-   
+    <div 
+        class="rules-page d-flex flex-column align-items-center justify-content-center"
+        *ngIf="showRules === true"
+    >
+        <div class="row rules-main-row d-flex flex-row justify-content-center justify-content-md-between">
+            <div>
+                <h4>RULES</h4>
+            </div>
+            <div class="d-none d-md-block close-rules" (click)="onShowRules()">
+                <img src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-close.svg" />
+            </div>
+        </div>
+
+        <div class="row rules-second-row d-flex justify-content-center align-items-center">
+            <img src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/image-rules-bonus.svg" />
+        </div>
+
+        <div class="d-block d-md-none close-rules" (click)="onShowRules()">
+            <img src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-close.svg" />
+        </div>
+    </div>
 </div>
-<!-- 
-Rules
-    
-You Picked
-The House Picked
 
-You Win
-You Lose
-
-Play Again -->
-
- <!-- <div class="gradient-border scissors scissors-1st-step-position" (click)="onYourPick('scissors')">
-                    <div class="circle d-flex flex-row align-items-center justify-content-center">
-                        <img class="sign-img" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-scissors.svg" />
-                    </div>
-                </div>
-                <div class="gradient-border paper paper-1st-step-position" (click)="onYourPick('paper')">
-                    <div class="circle d-flex flex-row align-items-center justify-content-center">
-                        <img class="sign-img" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-paper.svg" />
-                    </div>
-                </div>
-
-                <div class="gradient-border rock rock-1st-step-position" (click)="onYourPick('rock')">
-                    <div class="circle d-flex flex-row align-items-center justify-content-center">
-                        <img class="sign-img" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-rock.svg" />
-                    </div>
-                </div>
-                <div class="gradient-border lizard lizard-1st-step-position" (click)="onYourPick('lizard')">
-                    <div class="circle d-flex flex-row align-items-center justify-content-center">
-                        <img class="sign-img" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-lizard.svg" />
-                    </div>
-                </div>
-                <div class="gradient-border spock spock-1st-step-position" (click)="onYourPick('spock')">
-                    <div class="circle d-flex flex-row align-items-center justify-content-center">
-                        <img class="sign-img" src="assets/chSeventeen-rock-paper-scissors-lizard-spock-game/icon-spock.svg" />
-                    </div>
-                </div> -->

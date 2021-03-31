@@ -63,7 +63,7 @@ export class ProjectsService {
         inspirationWebsite: "https://www.frontendmentor.io/",
         name: "Rock, Paper, Scissors, Lizard, Spock game",
         challenge: '17th Challenge',
-        projectImage: "challengeSeventeen.jpg",
+        projectImage: "challengeSeventeen.png",
         technologies: [ 
           {imgName: 'htmlIcon.svg', imgAlt: 'Html'},
           {imgName: 'cssIcon.svg', imgAlt: 'CSS'},

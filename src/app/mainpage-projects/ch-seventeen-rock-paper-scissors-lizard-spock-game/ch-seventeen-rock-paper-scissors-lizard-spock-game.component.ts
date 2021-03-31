@@ -16,6 +16,7 @@ export class ChSeventeenRockPaperScissorsLizardSpockGameComponent implements OnI
   theHousePicked: string = "";
   theHousePickedSVG: String = "";
   currentRule: individualRuleModel;
+  showRules = false;
   currentStep = this.gameProgression.gameProgression.find(el => el.step === this.step);
 
   allSigns = ["scissors", "paper", "rock", "lizard", "spock"];
@@ -42,7 +43,6 @@ export class ChSeventeenRockPaperScissorsLizardSpockGameComponent implements OnI
     if(this.currentRule.rules[this.theHousePicked] === "WIN"){
       this.score = this.score + 1;
     }
-    // this.moveToStepThree();
 
     setTimeout( () => {
       this.step = 3;
@@ -71,9 +71,8 @@ export class ChSeventeenRockPaperScissorsLizardSpockGameComponent implements OnI
     this.currentStep = this.gameProgression.gameProgression.find(el => el.step === this.step);
   }
 
-  // moveToStepThree() = new Promise((resolve, reject) => {
-  //   setTimeout( () => {
-  //     resolve(console.log("my hero"))
-  //   }, 2000);
-  // })
+  onShowRules(){
+    this.showRules = !this.showRules;
+  }
+
 }
